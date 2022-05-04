@@ -5,7 +5,7 @@
 
 nav {
   text-align: center;
-  position: fixed;
+  position:fixed;
   top: 0;
   width: 100%;
   background: white;
@@ -34,7 +34,7 @@ nav li {
 
 
 .amritha {
-  padding-top: 30px;
+  padding-top: 17px;
   padding-left: 20px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -47,7 +47,7 @@ nav li {
 }
 
 .amrithaINNER{
-  padding-top: 30px;
+  padding-top: 17px;
   padding-left: 10px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -60,15 +60,13 @@ nav li {
   }
 
 .right{
-  margin-top: 40px;
+  margin-top: 21px;
   font-size: 15px;
   height: 20px;
   transition: 0.125s;
-  
 }
 
 .right:hover{
-  
   cursor: pointer;
   background-color: #ECECEC;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
@@ -192,4 +190,120 @@ nav li {
   justify-content: space-between;
   color: #000000;
 
+}
+
+
+@media only screen and (max-width: 991px) {
+
+  .homeunderleft{
+    margin-left: 50px;
+  }
+  
+  .homeunderright{
+    margin-right: 50px;
+    margin-top: 100px;
+  }
+
+  .home2left {
+    margin: 25px;
+    margin-right: 12.5px;
+  }
+
+  .home2right {
+    margin: 25px;
+    margin-left: 12.5px;
+  }
+
+  .amritha{
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  .logo{
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  .amrithaINNER{
+    font-size: 16px;
+  }
+
+  .right {
+    font-size: 14px;
+  }
+}
+
+.hammenu{
+  display: none;
+}
+
+.swapfalse{
+  display: none;
+}
+
+@media only screen and (max-width: 832px) {
+  .right {
+    display: none;
+  }
+  .hammenu{
+    display:block;
+    cursor: pointer;
+  }
+  .homeunderleft{
+    margin: 50px;
+  }
+  
+  .homeunderright{
+    margin: 50px;
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .swapfalse{
+    margin-left: 50px;
+    display: block;
+  }
+
+  .swaptrue{
+    display: none;
+  }
+  
+  .homeunderleft{
+    margin: 70px;
+  }
+  
+  .homeunderright{
+    margin: 70px;
+    margin-top: 50px;
+  }
+
+  .home2left {
+    margin: 25px;
+  }
+
+  .home2right {
+    margin: 25px;
+  }
+
+  .amritha{
+    font-size: 15px;
+  }
+
+  .amrithaINNER{
+    font-size: 15px;
+  }
+
+  .sidebyside {
+    display: block;
+    align-items: center;
+    flex-direction: row;
+  }
+
+
+  .Footer{
+    display: block;
+    font-size: 13px;
+  }
 }
