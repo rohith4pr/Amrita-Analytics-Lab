@@ -5,6 +5,12 @@
   flex-direction: column;
 }
 
+h1{
+  display: block;
+  margin-top: 86px;
+  margin-bottom: 86px;
+  text-align: center;
+}
 
 .service-nav-container{
   margin:10px auto;
@@ -42,3 +48,29 @@
   border-radius: 20px;
   transition: 0.25s;
 }
+
+.service-nav-content-container-mod{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.service-nav-content-container{
+  display: none;
+}
+ .service-nav-container-container{
+  background: #0A0C70;
+  height: 250px;
+  width: 350px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: columns;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-right: 20px;
+}
+.list{
+  font-family: montserrat;
+  color: wheat;
+  font-weight: bold;
+  }
