@@ -4,6 +4,7 @@ import rightimage from '../Home2Right.svg'
 import underimg from '../underimg.svg'
 import Footer from '../Footer';
 import NavBar from '../NavBar';
+import { Link } from 'react-router-dom';
 
 const HomeMain = () => {
 
@@ -26,7 +27,7 @@ const HomeMain = () => {
                 </div>
                 <div style={{display: 'flex', justifyContent: 'left', paddingTop:'10px'}}>
                     <div className='buttonstuff'>
-                        WHAT WE DO
+                        <Link to="/services" style={{color: 'inherit', textDecoration: 'inherit'}}> WHAT WE DO </Link>
                     </div>
                 </div> 
             </div>
