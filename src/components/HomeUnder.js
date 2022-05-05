@@ -11,7 +11,7 @@ const HomeUnder = () => (
             </div>
         </div>
         <div className='homeunderright' style={{flexBasis: '65%'}}>
-            <div style={{paddingBottom:'20px', fontWeight: '500'}} className="headerright">
+            <div style={{paddingBottom:'20px', fontWeight: '500', textAlign:'left'}} className="headerright">
                 When it comes to Consultation, Certificate Courses, or Training Programmes, We are to take those tasks with highest integrity and affordability.
             </div>
             <div style={{display: 'flex', justifyContent: 'left', paddingTop:'10px'}}>
