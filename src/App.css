@@ -91,6 +91,26 @@ nav li {
   background-color: #ECECEC;
 }
 
+.BlogPost {
+  display: flex;
+  padding-top: 82px;
+  background-color: #ECECEC;
+}
+
+.blogpostleft {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.blogpostright {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ECECEC;
+}
+
 .header{
   font-family: 'Montserrat';
   font-style: normal;
