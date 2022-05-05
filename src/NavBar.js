@@ -6,9 +6,10 @@ const NavBar = () => (
     <nav>
         <ul>
             <li className='logo'> 
-                <img width='60px' alt='some value' src={logo}/> 
-                <div className='amritha'>AMRITA</div>
-                <div className='amrithaINNER'>ANALYTICS LAB</div>
+
+                <img className='hovershit' width='60px' alt='some value' src={logo}/> 
+                <div className='amritha hovershit'>AMRITA</div>
+                <div className='amrithaINNER hovershit'>ANALYTICS LAB</div>
             </li>
             <li className='right'>
                 HOME
