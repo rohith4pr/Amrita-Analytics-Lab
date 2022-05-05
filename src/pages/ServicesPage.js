@@ -1,6 +1,6 @@
 const ServicesPage = () => (
     <div className="Home">
-        ServicesPage is making by Raed
+        ServicesPage will be made by Raed
     </div>
 )
 
