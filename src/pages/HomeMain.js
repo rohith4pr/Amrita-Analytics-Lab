@@ -3,11 +3,15 @@ import leftimage from '../Home2Left.svg'
 import rightimage from '../Home2Right.svg'
 import underimg from '../underimg.svg'
 import Footer from '../Footer';
+import NavBar from '../NavBar';
 
 const HomeMain = () => {
 
     const HomeUnder = () => (
         <div className='sidebyside'>
+            <div>
+                <NavBar />
+            </div>
             <div className='homeunderleft' style={{flexBasis: '45%'}}>
                 <div>
                 <img style={{
