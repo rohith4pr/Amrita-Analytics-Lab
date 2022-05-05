@@ -253,6 +253,44 @@ nav li {
   justify-content: right;
 }
 
+.Blog {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  background-color: #ECECEC;
+}
+
+.BlogHeader{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 73px;
+  margin-top: 40px;
+  margin-left: 80px;
+  color: #000000;
+
+}
+
+.BlogContent{
+  background-color: #d1d1d1;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.BlogRecentHeader{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  margin-top: 40px;
+  margin-left: 80px;
+  color: #000000;
+
+}
+
 
 @media only screen and (max-width: 991px) {
 
