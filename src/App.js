@@ -3,12 +3,14 @@ import HomeMain from './pages/HomeMain';
 import BlogPage from './pages/BlogPage';
 import LoginPage from './pages/LoginPage';
 import ServicesPage from './pages/ServicesPage';
+import ContactPage from './pages/ContactPage';
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
 import NotFoundPage from './pages/NotFoundPage';
+import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             <Route path="/blogs" element={<BlogPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/blogpost" element={<BlogPost />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
