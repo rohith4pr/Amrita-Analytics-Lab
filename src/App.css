@@ -291,6 +291,37 @@ nav li {
   color: #000000;
 
 }
+.ContactUsInfo {
+  display: flex;
+  padding-top: 100px;
+}
+.Info {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+
+  color: #FFFFFF;
+  padding: 50px;
+}
+.InfoInfo {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+.InfoImg {
+  width: 30px;
+  padding-left: 105px;
+  padding-right: 50px;
+ 
+}
 
 
 @media only screen and (max-width: 991px) {
