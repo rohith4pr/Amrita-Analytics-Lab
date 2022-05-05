@@ -4,15 +4,23 @@ import Readmore from "../Readmore.svg";
 import Blogpic from "../blogrecentpic.svg"
 
 const BlogPage = () => {
-    const RecentPostInfo = () =>{
+
+    const blogContents = [
+            {"blog-title":"Blog 1", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+            {"blog-title":"Blog 2", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+            {"blog-title":"Blog 3", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+        ]
+    
+
+    const RecentPostInfo = ({content,title}) =>{
 
         return(
             <div className="RecentBlogs">
                 <div style={{fontSize: '18px'}} className="BlogRecentHeader">
-                    Blog Post 1:
+                    {title}:
                 </div>
                 <div style={{marginRight: '60px'}}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    {content}
                 </div>
                 <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader">
                     Read more 
@@ -68,9 +76,8 @@ const BlogPage = () => {
                         <div style={{marginLeft : '80px',marginTop : '40px'}} className="BlogRecentHeader">
                             Recents
                         </div>
-                        <RecentPostInfo/>
-                        <RecentPostInfo/>
-                        <RecentPostInfo/>
+                        {blogContents.map((blog) => <RecentPostInfo content={blog["blog-content"]} title={blog["blog-title"]}/>)}
+                        
                     </div>
                     <div style={{flexBasis : "40%",borderRight: '2px solid #4d4d4d'}}>
                         <RecentPostExpandInfo/>
