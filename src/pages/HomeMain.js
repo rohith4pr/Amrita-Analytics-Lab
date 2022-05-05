@@ -73,7 +73,7 @@ const HomeMain = () => {
                     <img style={{
                                 width: '300px',
                                 height: '400px'
-                            }} alt='nothing' src={man}/>
+                                }} alt='nothing' src={man}/>
                 </div>
                 <div style={{flexBasis: '50%',marginLeft:'60px', paddingLeft:'50px',paddingRight:'20px',paddingTop:'100px',margin:'10px'}}>
                     <div style={{textAlign: 'right'}} className="header">
