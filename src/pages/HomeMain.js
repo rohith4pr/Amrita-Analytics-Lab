@@ -2,6 +2,7 @@ import man from '../man.svg';
 import leftimage from '../Home2Left.svg'
 import rightimage from '../Home2Right.svg'
 import underimg from '../underimg.svg'
+import Footer from '../Footer';
 
 const HomeMain = () => {
 
@@ -87,9 +88,10 @@ const HomeMain = () => {
             </div>
             <Home2/>
             <HomeUnder/>
-
+            <div>
+                <Footer />
+            </div>
         </div>
-        
     );
 }
 
