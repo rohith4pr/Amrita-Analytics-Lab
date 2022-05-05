@@ -1,8 +1,12 @@
 import '../service.css';
+import NavBar from '../NavBar';
 
 const ServicesPage = () => (
     <div className="Home">
-        <div className="main">
+      <div>
+          <NavBar />
+      </div>
+      <div className="main">
       <h1>Services</h1>
       <div className="service-dev">
         <div><button onclick="animation()">Consulting</button></div>

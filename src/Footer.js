@@ -5,7 +5,9 @@ import Insta from './Instagram.svg';
 import Linkedin from './LinkedIn.svg';
 
 
-const Footer = () =>{
+const Footer = () => {
+
+    
     var date = new Date();
 
     return(
