@@ -68,6 +68,8 @@ nav li {
   transition: 0.125s;
 }
 
+
+
 .right:hover{
   cursor: pointer;
   background-color: #ECECEC;
