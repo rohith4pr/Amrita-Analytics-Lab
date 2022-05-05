@@ -337,7 +337,7 @@ nav li {
   letter-spacing: 0.1em;
 
   color: #FFFFFF;
-  padding: 50px;
+  padding-top: 40px;
 }
 .InfoInfo {
   font-family: 'Montserrat';
@@ -345,13 +345,17 @@ nav li {
   font-weight: 700;
   font-size: 48px;
   line-height: 59px;
-  text-align: center;
+  text-align: left;
   color: #FFFFFF;
+  /* padding-top: 100px;
+  padding-left: 100px; */
+
+
 
 }
 .InfoImg {
   width: 30px;
-  padding-left: 105px;
+  /* padding-left: 105px; */
   padding-right: 50px;
  
 }
