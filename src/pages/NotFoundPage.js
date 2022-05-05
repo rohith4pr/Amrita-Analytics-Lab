@@ -3,7 +3,7 @@ import Page404 from "../404.svg"
 
 const NotFoundPage = () => (
     <div className="NotFound">
-        <img style={{flexBasis: "50%", width:'640px'}} src = {Page404}></img>
+        <img style={{flexBasis: "50%", width:'640px'}} alt='none' src = {Page404}></img>
         <div className="MainText404">
         Sorry,
             <div>
