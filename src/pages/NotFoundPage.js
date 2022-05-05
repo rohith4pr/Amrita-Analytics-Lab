@@ -8,7 +8,6 @@ const NotFoundPage = () => (
   
                 <img width="440" alt='none' style={{paddingRight: "80px", paddingTop: "100px"}} src = {Page404}/>
             </div>
-        
         </div>
         
         <div className="MainText404" style={{flexBasis: "50%", paddingLeft: "80px"}}>
