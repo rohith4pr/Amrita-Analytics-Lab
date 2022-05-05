@@ -1,7 +1,5 @@
 import './App.css';
-import NavBar from './NavBar';
 import HomeMain from './pages/HomeMain';
-import Footer from './Footer';
 import BlogPage from './pages/BlogPage';
 import LoginPage from './pages/LoginPage';
 import ServicesPage from './pages/ServicesPage';
@@ -17,9 +15,6 @@ function App() {
     <Router>
       <div className="App">
         <div>
-          <NavBar />
-        </div>
-        <div>
           <Routes>
             <Route exact path="/" element={<HomeMain />} />
             <Route path="/blogs" element={<BlogPage />} />
@@ -27,9 +22,6 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-        </div>
-        <div>
-          <Footer />
         </div>
       </div>
     </Router>
