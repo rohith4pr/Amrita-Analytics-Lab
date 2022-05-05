@@ -13,7 +13,7 @@ const NotFoundPage = () => (
         
         <div className="MainText404" style={{flexBasis: "50%", paddingLeft: "80px"}}>
         Sorry,
-            <div>
+            <div style={{marginTop: "-20px"}}>
             Page Not Found
             </div>
             <div className="Woops">
