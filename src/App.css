@@ -244,6 +244,8 @@ nav li {
 }
 .BackHome:hover {
   cursor: pointer;
+  cursor: pointer;
+  background: #d1d1d1;
 }
 
 .Image404 {
@@ -251,6 +253,7 @@ nav li {
   padding-bottom: 100px;
   justify-content: right;
 }
+
 
 @media only screen and (max-width: 991px) {
 
