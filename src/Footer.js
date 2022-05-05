@@ -11,7 +11,7 @@ const Footer = () =>{
     return(
         <div className="Footer">
             <div style={{flexBasis : '60%',marginLeft : '50px'}}>
-                © {date.getFullYear()} Proudly powered by Amrita Analytics Lab
+                &#169; {date.getFullYear()} Proudly powered by Amrita Analytics Lab
             </div>
             <div style={{display: 'flex',flexBasis : '40%',justifyContent : 'space-evenly',marginRight : '50px'}}>
                 <img className='hovershit' width='30px'  alt="Social" src={Twitter}></img>
