@@ -11,8 +11,8 @@ const ContactPage = () => (
             <div style={{flexBasis: "60%"}}>
                 Contact Us
             </div>
-            <div style={{display: "flex",flexDirection: "column", flexBasis: "40%", background: "#0A0C70"}}>
-                <div className='InfoInfo' style={{}}>
+            <div style={{display: "flex",flexDirection: "column", flexBasis: "40%", background: "#0A0C70", padding:"100px"}}>
+                <div className='InfoInfo'>
                     Info
                 </div>
                 <div className='Info'>
@@ -27,9 +27,9 @@ const ContactPage = () => (
                     <img className='InfoImg' src = {Time} alt='none'/>
                     09:00am - 06:00pm
                 </div>
-                <div className='Info'>
+                <div className='Info' style={{display: "flex"}}>
                     <img className='InfoImg' src = {Place} alt='none'/>
-                    Amritanagar, Ettimadai, Tamil Nadu 641112
+                     Amritanagar, Ettimadai, Tamil Nadu 641112
                 </div>
                 
             </div>
