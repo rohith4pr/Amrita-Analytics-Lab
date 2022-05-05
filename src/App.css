@@ -95,7 +95,7 @@ nav li {
   font-weight: 700;
   font-size: 40px;
   line-height: 50px;
-  text-align: justify;
+  text-align: center;
   color: #000000;
 }
 
@@ -106,7 +106,7 @@ nav li {
   font-size: 20px;
   line-height: 162.9%;
   /* or 33px */
-  text-align: justify;
+  text-align: center;
   color: #000000;
 }
 
