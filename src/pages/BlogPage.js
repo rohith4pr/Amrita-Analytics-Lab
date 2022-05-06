@@ -34,7 +34,9 @@ const BlogPage = () => {
 
         return(
             <div className="RecentBlogs">
-                <img alt="pic" src={Blogpic}></img>
+                <div className="picturesBlogs">
+                    <img alt="pic"  src={Blogpic}></img>
+                </div>
                 <div style={{marginTop : '40px'}} className="BlogRecentHeader">
                     Blog Post 1:
                 </div>
@@ -72,18 +74,18 @@ const BlogPage = () => {
                     Blog
                 </div>
                 <div className="BlogContent">
-                    <div style={{flexBasis : "30%",borderRight: '2px solid #4d4d4d'}}>
-                        <div style={{marginLeft : '80px',marginTop : '40px'}} className="BlogRecentHeader">
+                    <div className="blogSection1" >
+                        <div style={{marginTop : '40px'}} className="BlogRecentHeaderMain">
                             Recents
                         </div>
                         {blogContents.map((blog) => <RecentPostInfo content={blog["blog-content"]} title={blog["blog-title"]}/>)}
                         
                     </div>
-                    <div style={{flexBasis : "40%",borderRight: '2px solid #4d4d4d'}}>
+                    <div className="blogSection2" >
                         <RecentPostExpandInfo/>
                         <RecentPostExpandInfo/>
                     </div>
-                    <div style={{flexBasis : "30%"}}>
+                    <div className="blogSection3" >
                         <div className="Contributors">
                             <div  className="BlogRecentHeader">
                                 Contributors

@@ -326,6 +326,18 @@ nav li {
   color: #000000;
 
 }
+
+.BlogRecentHeaderMain{
+  display: flex;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  color: #000000;
+  margin-left: 80px;
+
+}
 .ContactUsInfo {
   display: flex;
   padding-top: 100px;
@@ -363,6 +375,7 @@ nav li {
 }
 
 .Contributors{
+  
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -373,6 +386,103 @@ nav li {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
   border-radius: 18px;
   padding : 40px;
+}
+
+.blogSection1{
+  flex-basis : 30%;
+  border-right: 2px solid #4d4d4d;
+  
+
+}
+
+.blogSection2{
+  flex-basis : 40%;
+  border-right: 2px solid #4d4d4d;
+
+}
+
+.blogSection3{
+  flex-basis : 30%;
+
+}
+
+img {  
+  max-width: 100%;  
+  height: auto;  
+  }  
+
+
+@media only screen and (max-width: 1405px) {
+
+  .RecentBlogs{
+    font-size: 15px;
+    line-height: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-left: 60px;
+  }
+
+  .BlogHeader{
+    
+    font-size: 55px;
+    line-height: 55px;
+    margin-top: 40px;
+    margin-left: 60px;
+  
+  }
+
+  .BlogRecentHeaderMain{
+    font-size: 40px;
+    line-height: 60px;
+    margin-left: 60px;
+  }
+  
+  .blogSection1{
+    flex-basis : 40%;
+    border-right: 2px solid #4d4d4d;
+  
+  }
+  
+  .blogSection2{
+    flex-basis : 60%;
+    border-right: 0px solid #4d4d4d;
+  
+  }
+  .blogSection3{
+    display: none;
+  
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .RecentBlogs{
+    font-size: 15px;
+    line-height: 20px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-left: 40px;
+  }
+  .BlogHeader{
+    
+    font-size: 55px;
+    line-height: 55px;
+    margin-top: 40px;
+    margin-left: 40px;
+  
+  }
+  .BlogRecentHeaderMain{
+    font-size: 40px;
+    line-height: 60px;
+    margin-left: 40px;
+  }
+  .BlogRecentHeader{
+    
+    font-size: 38px;
+    line-height: 55px;
+  
+  }
+
 }
 
 @media only screen and (max-width: 991px) {
@@ -413,6 +523,7 @@ nav li {
   .right {
     font-size: 14px;
   }
+  
 }
 
 .hammenu{
@@ -423,7 +534,7 @@ nav li {
   display: none;
 }
 
-@media only screen and (max-width: 832px) {
+@media only screen and (max-width: 835px) {
   .right {
     display: none;
   }
@@ -438,6 +549,32 @@ nav li {
   .homeunderright{
     margin: 50px;
     margin-top: 50px;
+  }
+  .blogSection1{
+    display: none;
+  
+  }
+  
+  .blogSection2{
+    flex-basis : 100%;
+    border-right: 0px solid #4d4d4d;
+  
+  }
+  .BlogHeader{
+    
+
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: 40px;
+    margin-left: 40px;
+    
+  
+  }
+  .BlogRecentHeader{
+    font-size: 30px;
+    line-height: 45px;
+    
+  
   }
 }
 
@@ -483,7 +620,10 @@ nav li {
     flex-direction: row;
   }
 
-
+  .picturesBlogs{
+    width: auto;
+  }
+  
   .Footer{
     display: block;
     font-size: 13px;
