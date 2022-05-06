@@ -1,5 +1,9 @@
 
-
+.spacer{
+  /* display: flex;
+  flex-direction: column; */
+  margin-bottom: 50px;
+}
 .hero{
   display: flex;
   flex-direction: column;

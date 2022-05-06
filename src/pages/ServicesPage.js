@@ -19,6 +19,7 @@ const ServicesPage = () => {
             <div>
               <NavBar />
             </div>
+            <div className='spacer'>
             <h1>Services</h1>
             <div className="service-nav-container">
                 <div><button className={toggleState === 1? "sevice-nav-ele-mod" : "service-nav-ele"} onClick={() => optionClick(1)} >Consulting</button></div>
@@ -66,7 +67,7 @@ const ServicesPage = () => {
                 <div className="service-nav-container-container"><ul><li className="list">We offer internship opportunities for graduate and post-graduate students</li></ul></div>
                 
             </div>
-
+          </div>
 
 
 
