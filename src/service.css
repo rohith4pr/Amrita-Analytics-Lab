@@ -7,21 +7,22 @@
 
 h1{
   display: block;
-  margin-top: 86px;
-  margin-bottom: 86px;
+  margin-top: 106px;
+  margin-bottom: 46px;
   text-align: center;
 }
 
 .service-nav-container{
-  margin:10px auto;
+  /* margin:0px auto; */
   border-radius: 30px;
   background: #ECECEC;
   height: 40px;
-  width: 700px;
+  margin-left: 250px;
+  margin-right: 250px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 111px;
+  margin-bottom: 60px;
 }
 
 .service-nav-ele{
@@ -53,6 +54,8 @@ h1{
   display: flex;
   justify-content: center;
   flex-direction: row;
+  overflow-x: auto;
+  margin: 0px 50px ;
 }
 .service-nav-content-container{
   display: none;
@@ -60,13 +63,14 @@ h1{
  .service-nav-container-container{
   background: #0A0C70;
   height: 250px;
-  width: 350px;
+   min-width: 200px; 
+  max-width: 350px; 
   border-radius: 20px;
   display: flex;
   flex-direction: columns;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 25px;
   margin-right: 20px;
 }
 .list{
