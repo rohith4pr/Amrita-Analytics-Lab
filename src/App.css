@@ -68,6 +68,8 @@ nav li {
   transition: 0.125s;
 }
 
+
+
 .right:hover{
   cursor: pointer;
   background-color: #ECECEC;
@@ -88,6 +90,26 @@ nav li {
 .Home {
   display: flex;
   padding-top: 100px;
+  background-color: #ECECEC;
+}
+
+.BlogPost {
+  display: flex;
+  padding-top: 82px;
+  background-color: #ECECEC;
+}
+
+.blogpostleft {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.blogpostright {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: #ECECEC;
 }
 
@@ -274,24 +296,84 @@ nav li {
 }
 
 .BlogContent{
-  background-color: #d1d1d1;
+  
   display: flex;
   flex-direction: row;
 
 }
 
+.RecentBlogs{
+  margin-top: 40px;
+  margin-left: 80px;
+  margin-right: 80px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #000000;
+  
+}
+
 .BlogRecentHeader{
+  display: flex;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
-  margin-top: 40px;
-  margin-left: 80px;
   color: #000000;
 
 }
+.ContactUsInfo {
+  display: flex;
+  padding-top: 100px;
+}
+.Info {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
 
+  color: #FFFFFF;
+  padding-top: 40px;
+}
+.InfoInfo {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  text-align: left;
+  color: #FFFFFF;
+  /* padding-top: 100px;
+  padding-left: 100px; */
+
+
+
+}
+.InfoImg {
+  width: 30px;
+  /* padding-left: 105px; */
+  padding-right: 50px;
+ 
+}
+
+.Contributors{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background: #E4E4E4;
+  margin-top: 20px;
+  margin-right: 25px;
+  margin-left: 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  padding : 40px;
+}
 
 @media only screen and (max-width: 991px) {
 

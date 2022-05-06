@@ -10,6 +10,7 @@ import {
   Route
 } from "react-router-dom";
 import NotFoundPage from './pages/NotFoundPage';
+import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/blogs/blogpost" element={<BlogPost />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
