@@ -413,7 +413,26 @@ img {
 
 
 @media only screen and (max-width: 1405px) {
+  .BlogRecentHeader{
+    font-size: 30px;
+    line-height: 50px;
+  
+  }
+  .Contributors{
+    padding : 30px;
+  }
+}
 
+@media only screen and (max-width: 1000px) {
+
+  
+
+  .BlogRecentHeader{
+    
+    font-size: 38px;
+    line-height: 55px;
+  
+  }
   .RecentBlogs{
     font-size: 15px;
     line-height: 20px;
@@ -452,36 +471,7 @@ img {
     display: none;
   
   }
-}
-
-@media only screen and (max-width: 1000px) {
-
-  .RecentBlogs{
-    font-size: 15px;
-    line-height: 20px;
-    margin-right: 10px;
-    margin-top: 30px;
-    margin-left: 40px;
-  }
-  .BlogHeader{
-    
-    font-size: 55px;
-    line-height: 55px;
-    margin-top: 40px;
-    margin-left: 40px;
   
-  }
-  .BlogRecentHeaderMain{
-    font-size: 40px;
-    line-height: 60px;
-    margin-left: 40px;
-  }
-  .BlogRecentHeader{
-    
-    font-size: 38px;
-    line-height: 55px;
-  
-  }
 
 }
 
