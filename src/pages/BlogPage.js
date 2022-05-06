@@ -2,8 +2,12 @@ import Footer from "../Footer";
 import NavBar from "../NavBar";
 import Readmore from "../Readmore.svg";
 import Blogpic from "../blogrecentpic.svg"
+import { useEffect } from "react";
 
 const BlogPage = () => {
+    useEffect(() => {
+        document.title = "Blogs"
+     }, []);
 
     const blogContents = [
             {"blog-title":"Blog 1", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},

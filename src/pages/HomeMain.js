@@ -5,8 +5,12 @@ import underimg from '../underimg.svg'
 import Footer from '../Footer';
 import NavBar from '../NavBar';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const HomeMain = () => {
+    useEffect(() => {
+        document.title = "Amrita Analytics Lab - Home"
+     }, []);
 
     const HomeUnder = () => (
         <div className='sidebyside'>

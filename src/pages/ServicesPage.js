@@ -1,10 +1,12 @@
 import '../service.css';
 import NavBar from '../NavBar';
 import Footer from '../Footer';
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ServicesPage = () => {
+  useEffect(() => {
+    document.title = "Services"
+ }, []);
 
     const[toggleState, setToggleState]=useState(1)
     

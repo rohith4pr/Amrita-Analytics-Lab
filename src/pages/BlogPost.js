@@ -7,8 +7,12 @@ import facebook from "../Facebook.svg";
 import linkedin from "../LinkedIn.svg";
 import pinterest from "../Pinterest.svg";
 import computer from "../computer.svg";
+import { useEffect } from "react";
 
 const BlogPost = () => {
+    useEffect(() => {
+        document.title = "BlogPost"
+     }, []);
     return(
         <div className="App">
             <div>
