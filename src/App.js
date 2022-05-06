@@ -23,7 +23,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/blogpost" element={<BlogPost />} />
+            <Route path="/blogs/blogpost" element={<BlogPost />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>

@@ -42,12 +42,19 @@ const NavBar = () => (
                         textDecoration: 'inherit',
                     })}  to="/contact"> CONTACT </NavLink>
             </li>
-            <li style={{marginRight : '70px'}} className='right'>
+            <li style={{marginRight : '0px'}} className='right'>
                 <NavLink style={({ isActive }) => ({
                         color: isActive ? '#545e6f' : 'inherit' ,
                         fontWeight : isActive ? 700 : 500,
                         textDecoration: 'inherit',
                     })}  to="/login"> LOGIN </NavLink>
+            </li>
+            <li style={{marginRight : '70px', fontSize:'7px'}} className='right'>
+                <NavLink style={({ isActive }) => ({
+                        color: isActive ? '#545e6f' : 'inherit' ,
+                        fontWeight : isActive ? 700 : 500,
+                        textDecoration: 'inherit',
+                    })}  to="/blogs/blogpost"> Dummy-Blogpost </NavLink>
             </li>
             <li>
             <img className='hammenu' style={{marginTop : '5px'}} width='42px' height='50px' alt='some value' src={menu}/> 
