@@ -83,8 +83,8 @@ const BlogPost = () => {
                     </div>
                 </div>
                 <div className='blogpostright' style={{flexBasis: '70%', margin:'20px'}}>
-                        <div style={{display:'flex', marginTop:'30px'}}>
-                            <div style={{display:'flex', flexDirection :'column', textAlign:'left', marginTop:'250px', marginRight:'50px'}}>
+                        <div className="blogResponsive" style={{ marginTop:'30px'}}>
+                            <div className="blogpostrightTopText" style={{display:'flex', flexDirection :'column', textAlign:'left', marginRight:'50px'}}>
                                 <div>
                                     11 December 2021
                                 </div>
