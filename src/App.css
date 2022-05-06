@@ -566,9 +566,13 @@ img {
     font-size: 40px;
     line-height: 50px;
     margin-top: 40px;
-    margin-left: 40px;
+    margin-left: 30px;
     
   
+  }
+  .RecentBlogs{
+    
+    margin-left: 30px;
   }
   .BlogRecentHeader{
     font-size: 30px;
