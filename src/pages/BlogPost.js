@@ -9,14 +9,14 @@ import pinterest from "../Pinterest.svg";
 import computer from "../computer.svg";
 import { useEffect } from "react";
 
-const BlogPost = () => {
+const BlogPost = ({user}) => {
     useEffect(() => {
         document.title = "BlogPost"
      }, []);
     return(
         <div className="App">
             <div>
-                <NavBar/>
+                <NavBar user={user}/>
             </div>
             <div className="BlogPost">
                 <div className='blogpostleft' style={{flexBasis: '30%'}}>

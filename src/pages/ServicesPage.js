@@ -3,7 +3,7 @@ import NavBar from '../NavBar';
 import Footer from '../Footer';
 import { useState, useEffect } from "react";
 
-const ServicesPage = () => {
+const ServicesPage = ({user}) => {
   useEffect(() => {
     document.title = "Services"
  }, []);
@@ -17,7 +17,7 @@ const ServicesPage = () => {
     return(
         <div className="hero">
             <div>
-              <NavBar />
+              <NavBar user={user}/>
             </div>
             <div className='spacer'>
             <h1>Services</h1>
