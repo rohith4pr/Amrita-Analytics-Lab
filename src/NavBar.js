@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import menu from './menu.png';
 import { NavLink } from 'react-router-dom';
 
-const NavBar = () => (
+const NavBar = ({user}) => (
     <nav>
         <ul>
             <li className='logo'> 
@@ -43,6 +43,12 @@ const NavBar = () => (
                     })}  to="/contact"> CONTACT </NavLink>
             </li>
             <li style={{marginRight : '0px'}} className='right'>
+                {(user.email !=="") ? (
+                    <Userpage user={user} setUSer={setUSer} />
+                ) : (
+                    <Loginpage Login={Login} error={error} />
+                )
+                }
                 <NavLink style={({ isActive }) => ({
                         color: isActive ? '#545e6f' : 'inherit' ,
                         fontWeight : isActive ? 700 : 500,

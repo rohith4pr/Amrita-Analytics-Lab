@@ -8,6 +8,7 @@ const LoginPage = () => {
     document.title = "Login"
   }, []);
 
+  
   return(
     <div >
        <nav>
