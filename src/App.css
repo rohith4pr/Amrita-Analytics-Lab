@@ -484,19 +484,19 @@ img {
   border-radius: 4px;
   box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
   padding-left: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
   /* padding: 70px; */
 
 }
 
-.LoginLeft h1{
+.LoginLeft h2{
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 59px;
   text-align: left;
-  padding-left: 40px;
+  padding: 30px;
   color: #FFFFFF;
 }
 
@@ -505,13 +505,12 @@ img {
   height: 30px;
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 29px;
   letter-spacing: 0.35em;
   margin-left: 40px;
-  margin-right: 120px;
-  margin-top: 20px;
-  padding-left: 7px;
+  margin-right: 150px;
+  padding-left: 5px;
   padding-bottom: 10px;
   border: none;
   color: #FFFFFF;
