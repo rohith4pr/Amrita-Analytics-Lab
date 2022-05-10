@@ -26,7 +26,9 @@ const ContactPage = () => {
                     <div>
                         <input style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="MESSAGES" name="name" id='messages' required />
                     </div>
-                    
+                    <div className='buttonstuffSend'>
+                        SEND
+                    </div>
 
                 </div>
                 
