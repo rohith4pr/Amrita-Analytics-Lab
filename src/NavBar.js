@@ -43,17 +43,21 @@ const NavBar = ({user}) => (
                     })}  to="/contact"> CONTACT </NavLink>
             </li>
             <li style={{marginRight : '0px'}} className='right'>
-                {(user.email !=="") ? (
-                    <Userpage user={user} setUSer={setUSer} />
+                {(user !=="") ? (
+                    <NavLink style={({ isActive }) => ({
+                        color: isActive ? '#545e6f' : 'inherit' ,
+                        fontWeight : isActive ? 700 : 500,
+                        textDecoration: 'inherit',
+                    })}  to="/contact"> CONTACT </NavLink>
                 ) : (
-                    <Loginpage Login={Login} error={error} />
-                )
-                }
-                <NavLink style={({ isActive }) => ({
+                    <NavLink style={({ isActive }) => ({
                         color: isActive ? '#545e6f' : 'inherit' ,
                         fontWeight : isActive ? 700 : 500,
                         textDecoration: 'inherit',
                     })}  to="/login"> LOGIN </NavLink>
+                )
+                }
+                
             </li>
             <li style={{marginRight : '70px', fontSize:'7px'}} className='right'>
                 <NavLink style={({ isActive }) => ({
