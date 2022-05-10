@@ -373,6 +373,35 @@ nav li {
   padding-right: 50px;
  
 }
+.contactUsDiv {
+  display: flex;
+  flex-direction: column;
+}
+.contactUs {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  padding-left: 100px;
+
+  color: #000000;
+}
+.contactUsEle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.35em;
+  color: #000000;
+  margin-top: 100px;
+  margin-left: 100px;
+  padding-bottom: 10px;
+  padding-left: 7px;
+  width: 500px;
+  border: none;
+}
 
 .Contributors{
   
@@ -409,17 +438,159 @@ nav li {
 img {  
   max-width: 100%;  
   height: auto;  
-  }  
+}  
 
-  .blogResponsive {
-    display: flex;
-    align-items: center;
-    background-color: #ECECEC;
-  }
+.blogResponsive {
+  display: flex;
+  align-items: center;
+  background-color: #ECECEC;
+}
 
-  .blogpostrightTopText{
-    margin-top: 250px;
-  }
+.blogpostrightTopText{
+  margin-top: 250px;
+}
+
+
+.LoginMain{
+  margin-top: 100px;
+  display: flex;
+}
+
+.LoginLeft{
+  flex-basis: 60%;
+  display: flex;
+  background: #0A0C70;
+  width: 500px;
+  margin-left: 65px;
+  display: flex;
+  border-radius: 4px;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+.LoginForm{
+  margin-top: 50px;
+  background: #0A0C70;
+}
+
+.LoginRight{
+  flex-basis: 40%;
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LoginLeft {
+  background: #0A0C70;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  padding-left: 70px;
+  padding-bottom: 70px;
+  /* padding: 70px; */
+
+}
+
+.LoginLeft h1{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  text-align: left;
+  padding-left: 40px;
+  color: #FFFFFF;
+}
+
+.FormField{
+  font-family: 'Montserrat';
+  height: 30px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0.35em;
+  margin-left: 40px;
+  margin-right: 120px;
+  margin-top: 20px;
+  padding-left: 7px;
+  padding-bottom: 10px;
+  border: none;
+  color: #FFFFFF;
+}
+
+.buttonstuffLogin{
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  background: #ECECEC;
+  border-radius: 29.5px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.24em;
+  color: #000000;
+  padding: 20px;
+  width: 180px;
+}
+input.contactUsEle::-webkit-input-placeholder {
+  color: black;
+}
+input.FormField::-webkit-input-placeholder {
+  color: white;
+}
+.amrithaLogin {
+  padding-top: 17px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 32px;
+  color: #000000;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.amrithaINNERLogin{
+  
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 32px;
+  color: #000000;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.buttonstuffLogin:hover{
+  cursor: pointer;
+  background: #d1d1d1;
+}
+
+input[type="email"]
+{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+
+input[type="password"]
+{
+    background: transparent;
+    border: none;
+    border-bottom: #ffffff;
+    outline: none;
+}
 
 @media only screen and (max-width: 1405px) {
   .BlogRecentHeader{
@@ -663,3 +834,5 @@ img {
     font-size: 13px;
   }
 }
+
+

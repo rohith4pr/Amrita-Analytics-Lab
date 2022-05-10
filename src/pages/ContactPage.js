@@ -13,9 +13,23 @@ const ContactPage = () => {
         <div>
             <NavBar />
             <div className="ContactUsInfo">
-                <div style={{flexBasis: "60%"}}>
-                    Contact Us
+                <div className='contactUsDiv' style={{flexBasis: "60%"}}>
+                    <div className='contactUs'>
+                        Contact Us
+                    </div>
+                    <div>
+                        <input style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="NAME" name="name" id='name' required />
+                    </div>
+                    <div>
+                        <input style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="EMAIL" name="name" id='email' required />
+                    </div>
+                    <div>
+                        <input style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="MESSAGES" name="name" id='messages' required />
+                    </div>
+                    
+
                 </div>
+                
                 <div style={{display: "flex",flexDirection: "column", flexBasis: "40%", background: "#0A0C70", padding:"100px"}}>
                     <div className='InfoInfo'>
                         Info
