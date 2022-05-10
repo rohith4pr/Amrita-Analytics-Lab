@@ -513,13 +513,12 @@ img {
   line-height: 29px;
   letter-spacing: 0.35em;
   margin-left: 40px;
-  margin-right: 40px;
+  margin-right: 120px;
   margin-top: 20px;
   padding-left: 7px;
   padding-bottom: 10px;
   border: none;
   color: #FFFFFF;
-  width: 650px;
 }
 
 .buttonstuffLogin{
