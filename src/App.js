@@ -4,6 +4,7 @@ import BlogPage from './pages/BlogPage';
 import LoginPage from './pages/LoginPage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
+import { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,18 +14,21 @@ import NotFoundPage from './pages/NotFoundPage';
 import BlogPost from './pages/BlogPost';
 
 function App() {
+
+  const [user,setUser] = useState("");
+
   return (
     <Router>
       <div className="App">
         <div>
           <Routes>
-            <Route exact path="/" element={<HomeMain />} />
-            <Route path="/blogs" element={<BlogPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/blogs/blogpost" element={<BlogPost />} />
-            <Route path="*" element={<NotFoundPage />} />
+            <Route exact path="/" element={<HomeMain user={user} setUser={setUser} />} />
+            <Route path="/blogs" element={<BlogPage user={user} setUser={setUser} />} />
+            <Route path="/login" element={<LoginPage user={user} setUser={setUser} />} />
+            <Route path="/services" element={<ServicesPage user={user} setUser={setUser} />} />
+            <Route path="/contact" element={<ContactPage user={user} setUser={setUser} />} />
+            <Route path="/blogs/blogpost" element={<BlogPost user={user} setUser={setUser} />} />
+            <Route path="*" element={<NotFoundPage user={user} setUser={setUser} />} />
           </Routes>
         </div>
       </div>
