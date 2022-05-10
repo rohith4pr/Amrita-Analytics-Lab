@@ -510,7 +510,7 @@ img {
   height: 30px;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 29px;
   letter-spacing: 0.35em;
   margin-left: 40px;
@@ -520,6 +520,7 @@ img {
   padding-bottom: 10px;
   border: none;
   color: #FFFFFF;
+  width: 650px;
 }
 
 .buttonstuffLogin{
