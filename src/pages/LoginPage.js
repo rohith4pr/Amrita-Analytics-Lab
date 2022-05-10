@@ -26,12 +26,12 @@ const LoginPage = () => {
       <div className="LoginMain">
         <div className="LoginLeft">
           <h1>Login your account</h1>
-          <input type="email" className="FormField" placeholder="USERNAME" name="name" id='name' required />
-          <div style={{borderBottom: '1px solid #FFFFFF',marginLeft: '40px' , marginRight : '40px'}}>
-          </div>
-          <input style={{ marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" name="name" id='name' required />
-          <div style={{borderBottom: '1px solid #FFFFFF',marginLeft: '40px' , marginRight : '40px'}}>
-          </div>
+          <input style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" name="name" id='name' required />
+          {/* <div style={{borderBottom: '1px solid #FFFFFF',marginLeft: '40px' , marginRight : '40px'}}>
+          </div> */}
+          <input style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" name="name" id='name' required />
+          {/* <div style={{borderBottom: '1px solid #FFFFFF',marginLeft: '40px' , marginRight : '40px'}}>
+          </div> */}
           <div className='buttonstuffLogin'>
             LOGIN
           </div>

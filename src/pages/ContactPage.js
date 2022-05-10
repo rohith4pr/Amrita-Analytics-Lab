@@ -17,14 +17,14 @@ const ContactPage = () => {
                     <div className='contactUs'>
                         Contact Us
                     </div>
-                    <div className='contactUsEle'>
-                        NAME
+                    <div>
+                        <input style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="NAME" name="name" id='name' required />
                     </div>
-                    <div className='contactUsEle'>
-                        EMAIL
+                    <div>
+                        <input style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="EMAIL" name="name" id='email' required />
                     </div>
-                    <div className='contactUsEle'>
-                        MESSAGE
+                    <div>
+                        <input style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="MESSAGES" name="name" id='messages' required />
                     </div>
                     
 
