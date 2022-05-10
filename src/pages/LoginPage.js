@@ -1,16 +1,14 @@
 //import NavBar from '../NavBar';
-import { useEffect,useState } from 'react';
+import { useEffect } from 'react';
 import logo from '../logo.svg';
 import logoLogin from '../logoLogin.svg';
 import { NavLink } from 'react-router-dom';
-const LoginPage = ({user,setUser}) => {
+const LoginPage = () => {
   useEffect(() => {
     document.title = "Login"
   }, []);
 
-  const[tempUser,setTempUser] = useState("");
-  const[tempPassword,setTempPassword] = useState("");
-
+  
   return(
     <div >
        <nav>
@@ -29,7 +27,7 @@ const LoginPage = ({user,setUser}) => {
       <div className="LoginMain">
         <div className="LoginLeft">
           <h1>Login your account</h1>
-          <input style={{borderBottom: '1px solid #FFFFFF'}} onChange value={user} type="email" className="FormField" placeholder="USERNAME" name="name" id='name' required />
+          <input style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" name="name" id='name' required />
           {/* <div style={{borderBottom: '1px solid #FFFFFF',marginLeft: '40px' , marginRight : '40px'}}>
           </div> */}
           <input style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" name="name" id='name' required />

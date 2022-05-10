@@ -26,7 +26,7 @@ const ContactPage = () => {
 
                 </div>
                 
-                <div style={{display: "flex",flexDirection: "column", flexBasis: "40%", background: "#0A0C70", padding:"100px"}}>
+                <div style={{display: "flex",flexDirection: "column", flexBasis: "40%", background: "#0A0C70", padding:"80px", paddingTop:"60px"}}>
                     <div className='InfoInfo'>
                         Info
                     </div>
