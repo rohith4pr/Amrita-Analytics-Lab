@@ -1,0 +1,4 @@
+.main-page{
+  display: flexbox;
+  flex-direction: column;
+}

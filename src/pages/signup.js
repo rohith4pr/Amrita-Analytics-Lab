@@ -4,8 +4,18 @@ import Footer from '../Footer';
 
 const signupPage = () =>{
   return(
-    <p>
-      SIGNUP_PAGE COMING SOON
-    </p>
+    <div className='main-container'>
+        <><div>
+          <NavBar />
+        </div><>
+        <div className='hero'>
+            <div>
+
+            </div>
+        </div>
+        <div>
+          <Footer />
+        </div></></>   
+    </div>
   )
 }
