@@ -47,8 +47,13 @@ const LoginPage = () => {
           <h2>Login your account</h2>
           <input style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" name="name" id='name' required />
           <input style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" name="name" id='name' required />
-          <div className='buttonstuffLogin'>
-            LOGIN
+          <div style={{display:'flex'}}>
+            <div className='buttonstuffLogin'>
+              LOGIN
+            </div>
+            <div className='buttonstuffLogin' style={{marginLeft:'100px'}}>
+              <NavLink style={{ textDecoration:'inherit', color:'inherit' }}  to="/signup"> SIGNUP </NavLink>
+            </div>
           </div>
         </div>
         <div className="LoginRight">
