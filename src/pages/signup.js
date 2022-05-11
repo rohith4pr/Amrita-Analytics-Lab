@@ -1,4 +1,3 @@
-import '../service.css';
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import './signup.css';
