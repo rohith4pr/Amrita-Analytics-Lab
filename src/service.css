@@ -25,14 +25,14 @@ h1{
 .service-nav-container {
   border-radius: 30px;
   background: #ECECEC;
-  height: 50px;
+  height: 52px;
   margin-left: 350px;
   margin-right: 250px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 60px;
-  width: 850px;
+  width: 880px;
 }
 
 .service-nav-ele{
@@ -45,7 +45,7 @@ h1{
   cursor: pointer;
   border-radius: 20px;
   transition: 0.35s;
-  height: 43px;
+  height: 40px;
   width: 200px;
   background-color: #ECECEC;
 }
