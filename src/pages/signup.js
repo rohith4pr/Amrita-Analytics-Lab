@@ -24,6 +24,9 @@ const SignUp = ({user}) =>{
         <div className='hero-container'>
             <div className='hero'>
               <div>
+                <p>Already have an account?<span>Click here</span></p>
+              </div>
+              <div>
                 <p style={{font:'montserrat', fontWeight:'bolder', fontSize:'50px', padding:'10px 40px',color:'white'}}>SignUp</p>
               </div>
               <div style={{flex:'flex'}}>
