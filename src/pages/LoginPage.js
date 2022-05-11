@@ -1,5 +1,5 @@
 //import NavBar from '../NavBar';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import logo from '../logo.svg';
 import logoLogin from '../logoLogin.svg';
 import { NavLink } from 'react-router-dom';
@@ -7,6 +7,24 @@ const LoginPage = () => {
   useEffect(() => {
     document.title = "Login"
   }, []);
+
+  const[tempUser,setTempUser] = useState("");
+  const[tempPassword,setTempPassword] = useState("");
+
+  const loginButtonAction = async () => {
+
+    console.log(tempUser);
+    console.log(tempPassword);
+    const result = await fetch(`/api/login-user-auth`, {
+        method: 'post',
+        body: JSON.stringify({ tempUser, tempPassword }),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    const body = await result.json();
+    console.log(body);
+  }
 
   
   return(
