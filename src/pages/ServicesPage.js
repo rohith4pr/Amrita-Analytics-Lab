@@ -23,9 +23,9 @@ const ServicesPage = ({user}) => {
             <h1>Services</h1>
             <div className="service-nav-container">
                 <div><button className={toggleState === 1? "sevice-nav-ele-mod" : "service-nav-ele"} onClick={() => optionClick(1)} >Consulting</button></div>
-                <div><button className={toggleState === 2? "sevice-nav-ele-mod" : "service-nav-ele"} onClick={() => optionClick(2)} >Learning</button></div>
-                <div><button className={toggleState === 3? "sevice-nav-ele-mod" : "service-nav-ele"} onClick={() => optionClick(3)} >Courses</button></div>
-                <div><button className={toggleState === 4? "sevice-nav-ele-mod" : "service-nav-ele"} onClick={() => optionClick(4)} >Internship</button></div>
+                <div><button className={toggleState === 2? "sevice-nav-ele-mod" : "service-nav-ele"} onClick={() => optionClick(2)} style = {{marginRight: '10px', marginLeft: '10px'}}>Learning </button></div>
+                <div><button className={toggleState === 3? "sevice-nav-ele-mod" : "service-nav-ele"} onClick={() => optionClick(3)} style = {{marginRight: '10px', marginLeft: '10px'}}>Courses</button></div>
+                <div><button className={toggleState === 4? "sevice-nav-ele-mod" : "service-nav-ele"} onClick={() => optionClick(4)}>Internship</button></div>
             </div> 
              <div className={toggleState === 1? "service-nav-content-container-consulting":"service-nav-content-container"}> 
                 <div className="service-nav-container-container-consulting"><ul><li className="list">We take up projects in various business domains which needs analytical solutions.</li></ul></div>
