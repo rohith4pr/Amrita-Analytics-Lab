@@ -15,7 +15,7 @@ const ServicesPage = ({user}) => {
     }
 
     return(
-        <div className="hero">
+        <div className="hero1">
             <div>
               <NavBar user={user}/>
             </div>
