@@ -35,8 +35,15 @@ const LoginPage = ({user,setUser}) => {
           <input style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" name="name" id='name' required />
           {/* <div style={{borderBottom: '1px solid #FFFFFF',marginLeft: '40px' , marginRight : '40px'}}>
           </div> */}
-          <div className='buttonstuffLogin'>
-            LOGIN
+          <div style={{display:'flex'}}>
+              <div className='buttonstuffLogin'>
+                LOGIN
+              </div>
+              <div style={{marginLeft:'200px'}} className='buttonstuffLogin'>
+                <NavLink style={{color: 'inherit', textDecoration: 'inherit'}} to="/signup">
+                  SIGNUP
+                </NavLink>
+              </div>
           </div>
         </div>
         <div className="LoginRight">
