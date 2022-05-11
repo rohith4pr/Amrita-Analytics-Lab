@@ -24,7 +24,7 @@ const SignUp = ({user}) =>{
         <div className='hero-container'>
             <div className='hero'>
               <div>
-                <p style={{font:'montserrat', fontWeight:'bolder', fontSize:'50px', padding:'10px 40px',color:'white'}}>SignUp</p>
+                <p style={{fontFamily:'Montserrat', fontStyle: 'normal', fontWeight:'700', fontSize:'40px', lineHeight: '49px', padding:'10px 40px',color:'white'}}>Create new account</p>
               </div>
               <div style={{flex:'flex'}}>
                     <input style={{borderBottom: '1px solid #FFFFFF',marginBottom:'50px'}} type="email" className="FormField" placeholder="FIRST NAME" name="name" id='name' required />
