@@ -13,8 +13,6 @@ const LoginPage = () => {
 
   const loginButtonAction = async () => {
 
-    console.log(tempUser);
-    console.log(tempPassword);
     const result = await fetch(`/api/login-user-auth`, {
         method: 'post',
         body: JSON.stringify({ tempUser, tempPassword }),
@@ -22,8 +20,6 @@ const LoginPage = () => {
             'Content-Type': 'application/json',
         }
     });
-    setTempUser(result.tempUser);
-    setTempPassword(result.tempPassword);
     const body = await result.json();
     console.log(body);
   }
@@ -47,8 +43,8 @@ const LoginPage = () => {
       <div className="LoginMain">
         <div className="LoginLeft">
           <h2>Login your account</h2>
-          <input onChange={(e) => setTempUser(e.target.value)} style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" name="name" id='name' required />
-          <input onChange={(e) => setTempPassword(e.target.value)} style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" name="name" id='name' required />
+          <input value={tempUser} onChange={(e) => setTempUser(e.target.value)} style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" id='name' required />
+          <input value={tempPassword} onChange={(e) => setTempPassword(e.target.value)} style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" id='password' required />
           <div style={{display:'flex'}}>
             <div onClick={ ()=>loginButtonAction() } className='buttonstuffLogin'>
               LOGIN
