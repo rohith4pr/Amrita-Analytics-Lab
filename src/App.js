@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import NotFoundPage from './pages/NotFoundPage';
 import BlogPost from './pages/BlogPost';
+import SignUp from './pages/SignUp';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/services" element={<ServicesPage user={user} setUser={setUser} />} />
             <Route path="/contact" element={<ContactPage user={user} setUser={setUser} />} />
             <Route path="/blogs/blogpost" element={<BlogPost user={user} setUser={setUser} />} />
+            <Route path="/signup" element={<SignUp user={user} setUser={setUser} />} />
             <Route path="*" element={<NotFoundPage user={user} setUser={setUser} />} />
           </Routes>
         </div>
