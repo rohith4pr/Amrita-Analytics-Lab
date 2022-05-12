@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 import NotFoundPage from './pages/NotFoundPage';
 import BlogPost from './pages/BlogPost';
-import SignUp from './pages/signup';
+import SignUp from './pages/SignUp';
 
 function App() {
 
