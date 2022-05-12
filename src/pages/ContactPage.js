@@ -5,13 +5,13 @@ import Time from '../Time.svg';
 import Place from '../Place.svg';
 import { useEffect } from 'react';
 
-const ContactPage = ({user}) => {
+const ContactPage = ({user,setUser}) => {
     useEffect(() => {
         document.title = "Contact"
      }, []);
     return(
         <div>
-            <NavBar user={user}/>
+            <NavBar user={user} setUser={setUser}/>
             <div className="ContactUsInfo">
                 <div className='contactUsDiv'>
                     <div className='contactUs'>

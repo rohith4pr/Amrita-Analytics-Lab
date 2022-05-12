@@ -7,7 +7,7 @@ import NavBar from '../NavBar';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-const HomeMain = ({user}) => {
+const HomeMain = ({user,setUser}) => {
     useEffect(() => {
         document.title = "Amrita Analytics Lab - Home"
      }, []);
@@ -15,7 +15,7 @@ const HomeMain = ({user}) => {
     const HomeUnder = () => (
         <div className='sidebyside'>
             <div>
-                <NavBar user={user}/>
+                <NavBar user={user} setUser={setUser}/>
             </div>
             <div className='homeunderleft' style={{flexBasis: '45%'}}>
                 <div style={{display: 'flex', justifyContent: 'right', marginRight: '100px' }} >
