@@ -13,6 +13,7 @@ import {
 import NotFoundPage from './pages/NotFoundPage';
 import BlogPost from './pages/BlogPost';
 import SignUp from './pages/SignUp';
+import AddBlog from './pages/AddBlog';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/contact" element={<ContactPage user={user} setUser={setUser} />} />
             <Route path="/blogs/blogpost" element={<BlogPost user={user} setUser={setUser} />} />
             <Route path="/signup" element={<SignUp user={user} setUser={setUser} />} />
+            <Route path="/addblog" element={<AddBlog user={user} setUser={setUser} />} />
             <Route path="*" element={<NotFoundPage user={user} setUser={setUser} />} />
           </Routes>
         </div>
