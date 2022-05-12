@@ -138,7 +138,8 @@ nav li {
 .sidebyside {
   flex-direction: row;
   display: flex;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
+  padding-top: 150px;
 }
 
 .Home2 {
@@ -295,6 +296,29 @@ nav li {
   color: #000000;
 
 }
+.blogPostHeadding {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 59px;
+
+  color: #000000;
+
+}
+.authorHeader {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 36px;
+  /* identical to box height */
+
+  letter-spacing: 0.1em;
+
+  color: #000000;
+
+}
 
 .BlogContent{
   
@@ -446,6 +470,12 @@ img {
 
 .blogpostrightTopText{
   margin-top: 250px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  color: #000000;
 }
 
 
