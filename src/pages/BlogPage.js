@@ -3,6 +3,7 @@ import NavBar from "../NavBar";
 import Readmore from "../Readmore.svg";
 import Blogpic from "../blogrecentpic.svg"
 import { useEffect } from "react";
+import { NavLink } from 'react-router-dom';
 
 const BlogPage = ({user,setUser}) => {
     useEffect(() => {
@@ -36,7 +37,7 @@ const BlogPage = ({user,setUser}) => {
                     </div> */}
                     <div className="createnewblog">
                         <div className="createnewblogtext">
-                            Create New Blog
+                            <NavLink style={{ textDecoration:'inherit', color:'inherit' }}  to="/addblog"> Create New Blog </NavLink>
                         </div>
                     </div>
 
