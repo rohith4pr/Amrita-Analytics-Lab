@@ -15,6 +15,34 @@ const BlogPage = ({user,setUser}) => {
             {"blog-title":"Blog 3", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
         ]
     
+    const AddBlog = () => {
+        return(
+            <div style={{display:"flex",flexDirection:"column",alignItems:"center"}} >
+                    {/* <div style={{paddingLeft:"20px"}} className="BlogRecentHeader">
+                        Create New Blog
+                    </div>
+                    <div>
+                        <textarea 
+                            style={{  
+                                        width:" 85%",
+                                        backgroundColor:" #fff",
+                                        borderRadius:" 31px",
+                                        marginBottom:" 16px",
+                                        minHeight:" 169px",
+                                        padding:" 20px",
+                                        margin:"20px"
+                                   }} 
+                            name="blog" placeholder="Start Typing"></textarea>
+                    </div> */}
+                    <div className="createnewblog">
+                        <div className="createnewblogtext">
+                            Create New Blog
+                        </div>
+                    </div>
+
+            </div>
+        )
+    }
 
     const RecentPostInfo = ({content,title}) =>{
 
@@ -38,14 +66,6 @@ const BlogPage = ({user,setUser}) => {
 
         return(
             <div className="RecentBlogs">
-                <div>
-                    <div  className="BlogRecentHeader">
-                        Create New Blog
-                    </div>
-                    {/* <div>
-                    <input value={tempUser} onChange={(e) => setTempUser(e.target.value)} style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="Start Typing" id='blog' required />
-                    </div> */}
-                </div>
                 <div className="picturesBlogs">
                     <img alt="pic"  src={Blogpic}></img>
                 </div>
@@ -94,6 +114,8 @@ const BlogPage = ({user,setUser}) => {
                         
                     </div>
                     <div className="blogSection2" >
+                        <AddBlog/>
+
                         <RecentPostExpandInfo/>
                         <RecentPostExpandInfo/>
                     </div>
