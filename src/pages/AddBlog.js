@@ -1,7 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "../NavBar";
 
 const AddBlog = ({user,setUser}) => {
+
+    const [title,setTitle] = useState();
+
     useEffect(() => {
         document.title = "Add Blog"
      }, []);
