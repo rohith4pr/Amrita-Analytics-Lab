@@ -1,23 +1,19 @@
-.main-page{
-  display: flexbox;
+.main-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 100px;
 
 }
 
-.hero{
+.hero {
     background: #0A0C70;
-    height: 700px;
     width: 900px;
     display: flex;
     align-items: left;
     flex-direction: column;
-    border-radius: 4px;
     box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
     padding-left: 70px;
-    padding-bottom: 40px;
-    /* padding: 70px; */
-  
   }
 
 

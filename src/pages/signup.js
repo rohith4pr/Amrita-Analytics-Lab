@@ -46,7 +46,7 @@ const SignUp = ({user}) =>{
   }
 
   return(
-    <div className='main-container Home'> 
+    <div className='main-container'>
        <nav>
           <ul>
               <li className='logo'> 
@@ -63,7 +63,7 @@ const SignUp = ({user}) =>{
               <div>
                 <p style={{fontFamily:'Montserrat', fontStyle: 'normal', fontWeight:'700', fontSize:'40px', lineHeight: '49px', padding:'10px 40px',color:'white'}}>Create new account</p>
               </div>
-              <div style={{flex:'flex'}}>
+              <div style={{flex:'flex', paddingRight: '150px'}}>
                     <input  value={tempUserFirstname} onChange={(e) => setTempUserFirstname(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF',marginBottom:'50px'}} type="email" className="FormField" placeholder="FIRST NAME" name="name" id='firstname' required />
                     <input  value={tempUserSecondname} onChange={(e) => setTempUserSecondname(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="LAST NAME" name="name" id='lastname' required />
               </div>

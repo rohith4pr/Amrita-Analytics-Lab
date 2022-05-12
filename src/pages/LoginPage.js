@@ -72,7 +72,7 @@ const LoginPage = () => {
         </div>
         <div className="LoginRight">
           <div>
-            <img width='300px' alt='some value' src={logoLogin}/> 
+            <img width='200px' alt='some value' src={logoLogin}/> 
           </div>
           <div>
             <div className='amrithaLogin'>AMRITA</div>
