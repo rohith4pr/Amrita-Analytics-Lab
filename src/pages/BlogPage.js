@@ -38,6 +38,14 @@ const BlogPage = ({user,setUser}) => {
 
         return(
             <div className="RecentBlogs">
+                <div>
+                    <div  className="BlogRecentHeader">
+                        Create New Blog
+                    </div>
+                    {/* <div>
+                    <input value={tempUser} onChange={(e) => setTempUser(e.target.value)} style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="Start Typing" id='blog' required />
+                    </div> */}
+                </div>
                 <div className="picturesBlogs">
                     <img alt="pic"  src={Blogpic}></img>
                 </div>
