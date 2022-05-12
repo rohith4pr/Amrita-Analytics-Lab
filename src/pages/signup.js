@@ -62,11 +62,13 @@ const SignUp = ({user,setUser}) =>{
         <div className='hero-container'>
             <div className='hero'>
               <div>
-                <p style={{fontFamily:'Montserrat', fontStyle: 'normal', fontWeight:'700', fontSize:'40px', lineHeight: '49px', padding:'10px 40px',color:'white'}}>Create new account</p>
+                <p style={{fontFamily:'Montserrat', fontStyle: 'normal', fontWeight:'700', fontSize:'40px', lineHeight: '49px', padding:'10px 40px',color:'white'}}>
+                  Create new account
+                </p>
               </div>
-              <div style={{flex:'flex', paddingRight: '150px'}}>
-                    <input  value={tempUserFirstname} onChange={(e) => setTempUserFirstname(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF',marginBottom:'50px'}} type="email" className="FormField" placeholder="FIRST NAME" name="name" id='firstname' required />
-                    <input  value={tempUserSecondname} onChange={(e) => setTempUserSecondname(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="LAST NAME" name="name" id='lastname' required />
+              <div style={{display:'flex', paddingRight: '150px'}}>
+                    <input  value={tempUserFirstname} onChange={(e) => setTempUserFirstname(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF', marginBottom:'50px'}} type="email" className="FormField2" placeholder="FIRST NAME" name="name" id='firstname' required />
+                    <input  value={tempUserSecondname} onChange={(e) => setTempUserSecondname(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField2" placeholder="LAST NAME" name="name" id='lastname' required />
               </div>
               <input  value={tempUser} onChange={(e) => setTempUser(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" name="name" id='username' required />
               { flag === 2 && <p>Username already exsists!</p>}
