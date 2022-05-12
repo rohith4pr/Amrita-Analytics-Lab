@@ -124,7 +124,31 @@ nav li {
   color: #000000;
 }
 
+.addblogheading{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
 
+.addblogtitle{
+  width: 565px;
+  height: 40px;
+  background: #F2F2F2;
+  border:none;
+  border-radius: 10px;
+}
+
+.addblogcontent{
+  width: 1001px;
+  min-height: 400px;
+  background: #F2F2F2;
+  border:none;
+  border-radius: 10px;
+}
 
 .createnewblog{
   display: flex;
