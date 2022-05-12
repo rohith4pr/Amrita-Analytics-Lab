@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import logo from '../logo.svg';
 import logoLogin from '../logoLogin.svg';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate  } from 'react-router-dom';
 const LoginPage = () => {
   useEffect(() => {
     document.title = "Login"
@@ -10,6 +10,8 @@ const LoginPage = () => {
 
   const[tempUser,setTempUser] = useState("");
   const[tempPassword,setTempPassword] = useState("");
+  const[flag,setFlag] = useState(0);
+  let navigate = useNavigate();
 
   const loginButtonAction = async () => {
 
@@ -21,7 +23,19 @@ const LoginPage = () => {
         }
     });
     const body = await result.json();
-    console.log(body);
+    if( body["res"] === "notfound"){
+      setFlag(2);
+    }
+    else if ( body["res"] === "passwordcorrect"){
+      setFlag(0);
+      navigate("/blogs");
+    }
+    else if ( body["res"] === "passwordwrong"){
+      setFlag(3);
+    }
+    else{
+      console.log(body["res"]);
+    }
   }
 
   
@@ -44,7 +58,9 @@ const LoginPage = () => {
         <div className="LoginLeft">
           <h2>Login your account</h2>
           <input value={tempUser} onChange={(e) => setTempUser(e.target.value)} style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" id='name' required />
+          { flag === 2 && <p>Your login credentials does not exist.</p>}
           <input value={tempPassword} onChange={(e) => setTempPassword(e.target.value)} style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" id='password' required />
+          { flag === 3 && <p>Your login credentials could not be verified, please try again.</p>}
           <div style={{display:'flex'}}>
             <div onClick={ ()=>loginButtonAction() } className='buttonstuffLogin'>
               LOGIN
