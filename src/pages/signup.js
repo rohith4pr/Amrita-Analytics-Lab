@@ -4,7 +4,7 @@ import './signup.css';
 import logo from '../logo.svg';
 import logoLogin from '../logoLogin.svg';
 
-const SignUp = ({user}) =>{
+const SignUp = ({user,setUser}) =>{
   useEffect(() => {
     document.title = "Sign Up"
  }, []);
@@ -38,6 +38,7 @@ const SignUp = ({user}) =>{
     }
     else if ( body["res"] === "newuseradded"){
       setFlag(1);
+      setUser(tempUser);
       navigate("/blogs");
     }
     else{

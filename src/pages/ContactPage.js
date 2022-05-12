@@ -11,7 +11,7 @@ const ContactPage = ({user,setUser}) => {
      }, []);
     return(
         <div>
-            <NavBar user={user} setUser={setUser}/>
+            <NavBar className="sidebyside" user={user} setUser={setUser}/>
             <div className="ContactUsInfo">
                 <div className='contactUsDiv'>
                     <div className='contactUs'>

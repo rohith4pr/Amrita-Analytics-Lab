@@ -124,6 +124,27 @@ nav li {
   color: #000000;
 }
 
+
+
+.createnewblog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 321px;
+  height: 61px;
+  background: #F8F8F8;
+  border-radius: 29.5px;
+}
+
+.createnewblogtext{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
 .headerright {
   font-family: 'Poppins';
   font-style: normal;
