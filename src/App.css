@@ -108,9 +108,10 @@ nav li {
 
 .blogpostright {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   background-color: #ECECEC;
+  
 }
 
 .header{
@@ -137,7 +138,8 @@ nav li {
 .sidebyside {
   flex-direction: row;
   display: flex;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
+  padding-top: 150px;
 }
 
 .Home2 {
@@ -294,6 +296,29 @@ nav li {
   color: #000000;
 
 }
+.blogPostHeadding {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 59px;
+
+  color: #000000;
+
+}
+.authorHeader {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 36px;
+  /* identical to box height */
+
+  letter-spacing: 0.1em;
+
+  color: #000000;
+
+}
 
 .BlogContent{
   
@@ -438,12 +463,19 @@ img {
 
 .blogResponsive {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   background-color: #ECECEC;
+  flex: 1 1;
 }
 
 .blogpostrightTopText{
   margin-top: 250px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  color: #000000;
 }
 
 
@@ -458,8 +490,11 @@ img {
   background: #0A0C70;
   width: 500px;
   margin-left: 65px;
-  border-radius: 4px;
   box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  align-items: left;
+  flex-direction: column;
+  padding-left: 70px;
+  padding-bottom: 40px;
 
 }
 
@@ -476,19 +511,6 @@ img {
   align-items: center;
 }
 
-.LoginLeft {
-  background: #0A0C70;
-  display: flex;
-  align-items: left;
-  flex-direction: column;
-  border-radius: 4px;
-  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
-  padding-left: 70px;
-  padding-bottom: 40px;
-  /* padding: 70px; */
-
-}
-
 .LoginLeft h2{
   font-family: 'Montserrat';
   font-style: normal;
@@ -497,6 +519,21 @@ img {
   line-height: 59px;
   text-align: left;
   padding: 30px;
+  color: #FFFFFF;
+}
+.FormField2 {
+  flex: 1 1 50%;
+  font-family: 'Montserrat';
+  height: 30px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 29px;
+  letter-spacing: 0.35em;
+  margin-left: 40px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  border: none;
   color: #FFFFFF;
 }
 
@@ -561,6 +598,9 @@ input.contactUsEle::-webkit-input-placeholder {
   color: black;
 }
 input.FormField::-webkit-input-placeholder {
+  color: white;
+}
+input.FormField2::-webkit-input-placeholder {
   color: white;
 }
 .amrithaLogin {

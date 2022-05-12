@@ -4,7 +4,7 @@ import Readmore from "../Readmore.svg";
 import Blogpic from "../blogrecentpic.svg"
 import { useEffect } from "react";
 
-const BlogPage = ({user}) => {
+const BlogPage = ({user,setUser}) => {
     useEffect(() => {
         document.title = "Blogs"
      }, []);
@@ -72,7 +72,7 @@ const BlogPage = ({user}) => {
     return(
     
         <div>
-            <NavBar user={user}/>
+            <NavBar user={user} setUser={setUser}/>
              <div className="Blog">
                 <div className="BlogHeader">
                     Blog

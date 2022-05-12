@@ -7,7 +7,7 @@ import NavBar from '../NavBar';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-const HomeMain = ({user}) => {
+const HomeMain = ({user,setUser}) => {
     useEffect(() => {
         document.title = "Amrita Analytics Lab - Home"
      }, []);
@@ -15,18 +15,18 @@ const HomeMain = ({user}) => {
     const HomeUnder = () => (
         <div className='sidebyside'>
             <div>
-                <NavBar user={user}/>
+                <NavBar user={user} setUser={setUser}/>
             </div>
             <div className='homeunderleft' style={{flexBasis: '45%'}}>
-                <div>
+                <div style={{display: 'flex', justifyContent: 'right', marginRight: '100px' }} >
                 <img style={{
                             width: '300px',
-                            height: '400px'
+                            height: '400px',
                         }} alt='some value' src={underimg}/>
                 </div>
             </div>
             <div className='homeunderright' style={{flexBasis: '65%'}}>
-                <div style={{paddingBottom:'20px', fontWeight: '500', textAlign:'left'}} className="headerright">
+                <div style={{paddingBottom:'20px', fontWeight: '500', textAlign:'left', marginRight: '100px'}} className="headerright">
                     When it comes to Consultation, Certificate Courses, or Training Programmes, We are to take those tasks with highest integrity and affordability.
                 </div>
                 <div style={{display: 'flex', justifyContent: 'left', paddingTop:'10px'}}>
@@ -80,11 +80,11 @@ const HomeMain = ({user}) => {
                                 }} alt='nothing' src={man}/>
                 </div>
                 <div style={{flexBasis: '50%',marginLeft:'60px', paddingLeft:'50px',paddingRight:'20px',paddingTop:'100px',margin:'10px'}}>
-                    <div style={{textAlign: 'right'}} className="header">
+                    <div style={{textAlign: 'right', paddingLeft: "100px"}} className="header">
             
                         Are You Looking for Analytical Solutions for Your Business?
                     </div>
-                    <div style={{paddingTop:'25px',textAlign: 'right'}} className="headerright">
+                    <div style={{paddingTop:'25px',textAlign: 'right', paddingLeft: '80px'}} className="headerright">
                         We are a group of proactive analytics enthusiasts, who work tirelessly to solve data problems and exchange ideas of how to improve business using analytics.
                     </div>
                 </div>

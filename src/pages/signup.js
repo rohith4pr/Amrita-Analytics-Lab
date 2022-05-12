@@ -1,15 +1,53 @@
-import { NavLink } from 'react-router-dom';
-import { useEffect } from 'react';
+import { NavLink,useNavigate} from 'react-router-dom';
+import { useEffect,useState } from 'react';
 import './signup.css';
 import logo from '../logo.svg';
 import logoLogin from '../logoLogin.svg';
 
-const SignUp = ({user}) =>{
+const SignUp = ({user,setUser}) =>{
   useEffect(() => {
     document.title = "Sign Up"
  }, []);
+
+  const[tempUser,setTempUser] = useState("");
+  const[tempPassword,setTempPassword] = useState("");
+  const[tempConfirmPassword,setTempConfirmPassword] = useState("");
+  const[tempUserFirstname,setTempUserFirstname] = useState("");
+  const[tempUserSecondname,setTempUserSecondname] = useState("");
+
+  const[flag,setFlag] = useState(0);
+  let navigate = useNavigate();
+
+  const signupButtonAction = async () => {
+    setFlag(0);
+    if(tempPassword !== tempConfirmPassword){
+      setFlag(3);
+      return;
+    }
+
+    const result = await fetch(`/api/signup-user-auth`, {
+        method: 'post',
+        body: JSON.stringify({ tempUser, tempPassword,  tempUserFirstname, tempUserSecondname}),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    const body = await result.json();
+    if( body["res"] === "useralreadyexist"){
+      setFlag(2);
+    }
+    else if ( body["res"] === "newuseradded"){
+      setFlag(1);
+      setUser(tempUser);
+      navigate("/blogs");
+    }
+    else{
+      console.log(body["res"]);
+    }
+  }
+
   return(
-    <div className='main-container Home'>
+    <div className='main-container'>
        <nav>
           <ul>
               <li className='logo'> 
@@ -24,20 +62,18 @@ const SignUp = ({user}) =>{
         <div className='hero-container'>
             <div className='hero'>
               <div>
-                <p>Already have an account?<span>Click here</span></p>
+                <p style={{fontFamily:'Montserrat', fontStyle: 'normal', fontWeight:'700', fontSize:'40px', lineHeight: '49px', padding:'10px 40px',color:'white'}}>Create new account</p>
               </div>
-              <div>
-                <p style={{font:'montserrat', fontWeight:'bolder', fontSize:'50px', padding:'10px 40px',color:'white'}}>SignUp</p>
+              <div style={{flex:'flex', paddingRight: '150px'}}>
+                    <input  value={tempUserFirstname} onChange={(e) => setTempUserFirstname(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF',marginBottom:'50px'}} type="email" className="FormField" placeholder="FIRST NAME" name="name" id='firstname' required />
+                    <input  value={tempUserSecondname} onChange={(e) => setTempUserSecondname(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="LAST NAME" name="name" id='lastname' required />
               </div>
-              <div style={{flex:'flex'}}>
-                    <input style={{borderBottom: '1px solid #FFFFFF',marginBottom:'50px'}} type="email" className="FormField" placeholder="FIRST NAME" name="name" id='name' required />
-                    <input style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="LAST NAME" name="name" id='name' required />
-              </div>
-              <input style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" name="name" id='name' required />
-              <input style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" name="name" id='name' required />
-              <input style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="CONFIIRM PASSWORD" name="name" id='name' required />
-            
-              <div className='buttonstuffLogin'>
+              <input  value={tempUser} onChange={(e) => setTempUser(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" name="name" id='username' required />
+              { flag === 2 && <p>Username already exsists!</p>}
+              <input  value={tempPassword} onChange={(e) => setTempPassword(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" name="name" id='password' required />
+              <input  value={tempConfirmPassword} onChange={(e) => setTempConfirmPassword(e.target.value)}  style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="CONFIIRM PASSWORD" name="name" id='confirmpassword' required />
+              { flag === 3 && <p>Your password does not match !</p>}
+              <div onClick={signupButtonAction} className='buttonstuffLogin'>
                   SIGN UP
               </div>
              

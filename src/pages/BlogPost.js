@@ -9,18 +9,18 @@ import pinterest from "../Pinterest.svg";
 import computer from "../computer.svg";
 import { useEffect } from "react";
 
-const BlogPost = ({user}) => {
+const BlogPost = ({user,setUser}) => {
     useEffect(() => {
         document.title = "BlogPost"
      }, []);
     return(
         <div className="App">
             <div>
-                <NavBar user={user}/>
+                <NavBar user={user} setUser={setUser}/>
             </div>
             <div className="BlogPost">
                 <div className='blogpostleft' style={{flexBasis: '30%'}}>
-                    <div className='header' style={{fontSize:'20px', marginTop:'20px', textAlign:'left', marginLeft:'60px'}}>
+                    <div className='authorHeader' style={{marginTop:'20px', textAlign:'left', marginLeft:'60px'}}>
                         Author Information
                     </div>
                     <div style={{display:'flex', marginLeft:'60px'}}>
@@ -36,63 +36,66 @@ const BlogPost = ({user}) => {
                             </div>
                         </div>
                     </div>
-                    <div className='header' style={{fontSize:'20px', marginTop:'10px', textAlign:'left', marginLeft:'60px'}}>
+                    <div className='authorHeader' style={{fontSize:'20px', marginTop:'10px', textAlign:'left', marginLeft:'60px'}}>
                         About Me
                     </div>
                     <div className='headerright' style={{fontSize:'15px', marginBottom:'1px', marginTop:'1px', marginLeft:'60px', marginRight:'50px', textAlign:'left'}}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </div>
-                    <div className='header' style={{fontSize:'20px', textAlign:'left', marginLeft:'60px'}}>
+                    <div className='authorHeader' style={{fontSize:'20px', textAlign:'left', marginLeft:'60px'}}>
                         Contact Me
                     </div>
-                    <div style={{display:'flex', textAlign:'left', marginLeft:'60px'}}>
-                        <div>
-                            <img src={twitter} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
+                    <div style={{display: "flex", justifyContent: 'left', flexDirection: 'column'}}>
+                        <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                            <div>
+                                <img src={twitter} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
+                            </div>
+                            <div className='headerright' style={{fontSize:'15px'}}>
+                                /RaedMajeed
+                            </div>
                         </div>
-                        <div className='headerright' style={{fontSize:'15px', marginTop:'14px'}}>
-                            /RaedMajeed
+                        <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                            <div>
+                                <img src={instagram} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
+                            </div>
+                            <div className='headerright' style={{fontSize:'15px'}}>
+                                /RaedMajeed
+                            </div>
+                        </div>
+                        <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                            <div>
+                                <img src={facebook} style={{width:'30px', marginRight:'10px', padding: '5px'}} alt='pic'/>
+                            </div>
+                            <div className='headerright' style={{fontSize:'15px'}}>
+                                /RaedMajeed
+                            </div>
+                        </div>
+                        <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                            <div>
+                                <img src={linkedin} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
+                            </div>
+                            <div className='headerright' style={{fontSize:'15px'}}>
+                                /RaedMajeed
+                            </div>
+                        </div>
+                        <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                            <div>
+                                <img src={pinterest} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
+                            </div>
+                            <div className='headerright' style={{fontSize:'15px'}}>
+                                /RaedMajeed
+                            </div>
                         </div>
                     </div>
-                    <div style={{display:'flex', textAlign:'left', marginLeft:'60px' }}>
-                        <div>
-                            <img src={instagram} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
-                        </div>
-                        <div className='headerright' style={{fontSize:'15px', marginTop:'14px'}}>
-                            /RaedMajeed
-                        </div>
-                    </div>
-                    <div style={{display:'flex', textAlign:'left', marginLeft:'60px'}}>
-                        <div>
-                            <img src={facebook} style={{width:'38px', marginRight:'10px'}} alt='pic'/>
-                        </div>
-                        <div className='headerright' style={{fontSize:'15px', marginTop:'14px'}}>
-                            /RaedMajeed
-                        </div>
-                    </div>
-                    <div style={{display:'flex', textAlign:'left', marginLeft:'60px'}}>
-                        <div>
-                            <img src={linkedin} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
-                        </div>
-                        <div className='headerright' style={{fontSize:'15px', marginTop:'14px'}}>
-                            /RaedMajeed
-                        </div>
-                    </div>
-                    <div style={{display:'flex', textAlign:'left', marginLeft:'60px'}}>
-                        <div>
-                            <img src={pinterest} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
-                        </div>
-                        <div className='headerright' style={{fontSize:'15px', marginTop:'14px'}}>
-                            /RaedMajeed
-                        </div>
-                    </div>
+                    
                 </div>
                 <div className='blogpostright' style={{flexBasis: '70%', margin:'20px'}}>
-                        <div className="blogResponsive" style={{ marginTop:'30px'}}>
-                            <div className="blogpostrightTopText" style={{display:'flex', flexDirection :'column', textAlign:'left', marginRight:'50px'}}>
+                        <div className="blogResponsive" style={{marginTop:'30px'}}>
+                            <div className="blogpostrightTopText" style={{display:'flex', flexDirection :'column', justifyContent: 'left', flexBasis: '40%', paddingLeft: '20px'}}>
                                 <div>
                                     11 December 2021
                                 </div>
-                                <div className="header">
+                                <div className="blogPostHeadding" style={{textAlign: 'left'}}>
                                     Blog Post 1
                                 </div>
                             </div>
