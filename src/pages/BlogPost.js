@@ -20,7 +20,7 @@ const BlogPost = ({user}) => {
             </div>
             <div className="BlogPost">
                 <div className='blogpostleft' style={{flexBasis: '30%'}}>
-                    <div className='header' style={{fontSize:'20px', marginTop:'20px', textAlign:'left', marginLeft:'60px'}}>
+                    <div className='authorHeader' style={{marginTop:'20px', textAlign:'left', marginLeft:'60px'}}>
                         Author Information
                     </div>
                     <div style={{display:'flex', marginLeft:'60px'}}>
@@ -36,13 +36,13 @@ const BlogPost = ({user}) => {
                             </div>
                         </div>
                     </div>
-                    <div className='header' style={{fontSize:'20px', marginTop:'10px', textAlign:'left', marginLeft:'60px'}}>
+                    <div className='authorHeader' style={{fontSize:'20px', marginTop:'10px', textAlign:'left', marginLeft:'60px'}}>
                         About Me
                     </div>
                     <div className='headerright' style={{fontSize:'15px', marginBottom:'1px', marginTop:'1px', marginLeft:'60px', marginRight:'50px', textAlign:'left'}}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </div>
-                    <div className='header' style={{fontSize:'20px', textAlign:'left', marginLeft:'60px'}}>
+                    <div className='authorHeader' style={{fontSize:'20px', textAlign:'left', marginLeft:'60px'}}>
                         Contact Me
                     </div>
                     <div style={{display: "flex", justifyContent: 'left', flexDirection: 'column'}}>
@@ -95,7 +95,7 @@ const BlogPost = ({user}) => {
                                 <div>
                                     11 December 2021
                                 </div>
-                                <div className="header" style={{textAlign: 'left'}}>
+                                <div className="blogPostHeadding" style={{textAlign: 'left'}}>
                                     Blog Post 1
                                 </div>
                             </div>
