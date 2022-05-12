@@ -149,16 +149,14 @@ h1 {
  
   @media only screen and (max-width: 945px){
     .service-nav-container{
-      /* margin:0px auto; */
       border-radius: 30px;
       background: #ECECEC;
       height: 40px;
-      margin-left: 150px;
-      margin-right: 150px;
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin-bottom: 60px;
+      width: 600px;
     }
     .service-nav-content-container-courses{
       display: flex;
@@ -197,6 +195,47 @@ h1 {
       align-items: center;
       padding: 25px;
       margin-right: 5px;
+    }
+    .service-nav-ele {
+      font-size: 15px;
+      
+      align-items: center;
+      font-weight: bold;
+      font-family: montserrat;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: 0.35s;
+      height: 35px;
+      width: 135px;
+      background-color: #ECECEC;
+    }
+    .service-nav-ele:hover {
+      height: 35px;
+      width: 135px;
+      border-radius: 20px;
+      background-color: #f3f3f3; 
+    }
+    .sevice-nav-ele-mod {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 81px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: center;
+      height: 35px;
+      width: 135px;
+      background: rgb(255, 255, 255);
+      color:#0A0C70 ;
+      align-items: center;
+      font-weight: bold;
+      font-family: montserrat;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s;
+      /* padding-left: 0px; */
     }
   }
 
@@ -205,13 +244,12 @@ h1 {
       /* margin:0px auto; */
       border-radius: 30px;
       background: #ECECEC;
-      height: 40px;
-      margin-left: 40px;
-      margin-right: 40px;
+      height: 35px;
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin-bottom: 60px;
+      width: 390px;
     }
     .service-nav-content-container-courses{
       display: flex;
@@ -247,7 +285,47 @@ h1 {
       padding: 25px;
       margin: 10px 0px;
     }
-    
+    .service-nav-ele {
+      font-size: 11px;
+      
+      align-items: center;
+      font-weight: bold;
+      font-family: montserrat;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: 0.35s;
+      height: 30px;
+      width: 80px;
+      background-color: #ECECEC;
+    }
+    .service-nav-ele:hover {
+      height: 30px;
+      width: 80px;
+      border-radius: 20px;
+      background-color: #f3f3f3; 
+    }
+    .sevice-nav-ele-mod {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 81px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 30px;
+      text-align: center;
+      height: 30px;
+      width: 80px;
+      background: rgb(255, 255, 255);
+      color:#0A0C70 ;
+      align-items: center;
+      font-weight: bold;
+      font-family: montserrat;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s;
+      /* padding-left: 0px; */
+    }
   }
 
   @media only screen and (max-width: 480px){
@@ -255,13 +333,53 @@ h1 {
       /* margin:0px auto; */
       border-radius: 30px;
       background: #ECECEC;
-      height: 40px;
-      margin-left: 10px;
-      margin-right: 10px;
+      height: 30px;
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin-bottom: 60px;
+      width: 350px;
+    }
+    .service-nav-ele {
+      font-size: 8px;
+      
+      align-items: center;
+      font-weight: bold;
+      font-family: montserrat;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: 0.35s;
+      height: 25px;
+      width: 70px;
+      background-color: #ECECEC;
+    }
+    .service-nav-ele:hover {
+      height: 25px;
+      width: 70px;
+      border-radius: 20px;
+      background-color: #f3f3f3; 
+    }
+    .sevice-nav-ele-mod {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 81px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 9px;
+      line-height: 30px;
+      text-align: center;
+      height: 25px;
+      width: 70px;
+      background: rgb(255, 255, 255);
+      color:#0A0C70 ;
+      align-items: center;
+      font-weight: bold;
+      font-family: montserrat;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s;
+      padding-top: 0px;
     }
     .service-nav-content-container-courses{
       display: flex;
