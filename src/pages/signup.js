@@ -9,7 +9,7 @@ const SignUp = ({user}) =>{
     document.title = "Sign Up"
  }, []);
   return(
-    <div className='main-container Home'>
+    <div className='main-container'>
        <nav>
           <ul>
               <li className='logo'> 
@@ -26,9 +26,9 @@ const SignUp = ({user}) =>{
               <div>
                 <p style={{fontFamily:'Montserrat', fontStyle: 'normal', fontWeight:'700', fontSize:'40px', lineHeight: '49px', padding:'10px 40px',color:'white'}}>Create new account</p>
               </div>
-              <div style={{flex:'flex'}}>
-                    <input style={{borderBottom: '1px solid #FFFFFF',marginBottom:'50px'}} type="email" className="FormField" placeholder="FIRST NAME" name="name" id='name' required />
-                    <input style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="LAST NAME" name="name" id='name' required />
+              <div style={{display:'flex', paddingRight: '150px'}}>
+                    <input style={{borderBottom: '1px solid #FFFFFF', marginBottom:'50px'}} type="email" className="FormField2" placeholder="FIRST NAME" name="name" id='name' required />
+                    <input style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField2" placeholder="LAST NAME" name="name" id='name' required />
               </div>
               <input style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" name="name" id='name' required />
               <input style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" name="name" id='name' required />

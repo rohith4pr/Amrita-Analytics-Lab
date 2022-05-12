@@ -1,5 +1,5 @@
 //import NavBar from '../NavBar';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import logo from '../logo.svg';
 import logoLogin from '../logoLogin.svg';
 import { NavLink } from 'react-router-dom';
@@ -7,24 +7,6 @@ const LoginPage = () => {
   useEffect(() => {
     document.title = "Login"
   }, []);
-
-  const[tempUser,setTempUser] = useState("");
-  const[tempPassword,setTempPassword] = useState("");
-
-  const loginButtonAction = async () => {
-
-    console.log(tempUser);
-    console.log(tempPassword);
-    const result = await fetch(`/api/login-user-auth`, {
-        method: 'post',
-        body: JSON.stringify({ tempUser, tempPassword }),
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    });
-    const body = await result.json();
-    console.log(body);
-  }
 
   
   return(
@@ -47,18 +29,13 @@ const LoginPage = () => {
           <h2>Login your account</h2>
           <input style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" name="name" id='name' required />
           <input style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" name="name" id='name' required />
-          <div style={{display:'flex'}}>
-            <div className='buttonstuffLogin'>
-              LOGIN
-            </div>
-            <div className='buttonstuffLogin' style={{marginLeft:'100px'}}>
-              <NavLink style={{ textDecoration:'inherit', color:'inherit' }}  to="/signup"> SIGNUP </NavLink>
-            </div>
+          <div className='buttonstuffLogin'>
+            LOGIN
           </div>
         </div>
         <div className="LoginRight">
           <div>
-            <img width='300px' alt='some value' src={logoLogin}/> 
+            <img width='200px' alt='some value' src={logoLogin}/> 
           </div>
           <div>
             <div className='amrithaLogin'>AMRITA</div>
