@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import logo from '../logo.svg';
 import logoLogin from '../logoLogin.svg';
 import { NavLink, useNavigate  } from 'react-router-dom';
-const LoginPage = () => {
+const LoginPage = ({user,setUser}) => {
   useEffect(() => {
     document.title = "Login"
   }, []);
@@ -28,6 +28,8 @@ const LoginPage = () => {
     }
     else if ( body["res"] === "passwordcorrect"){
       setFlag(0);
+      console.log(tempUser);
+      setUser(tempUser);
       navigate("/blogs");
     }
     else if ( body["res"] === "passwordwrong"){
