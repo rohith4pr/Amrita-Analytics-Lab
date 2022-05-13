@@ -28,7 +28,6 @@ const LoginPage = ({user,setUser}) => {
     }
     else if ( body["res"] === "passwordcorrect"){
       setFlag(0);
-      console.log(tempUser);
       setUser(tempUser);
       navigate("/blogs");
     }

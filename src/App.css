@@ -170,7 +170,7 @@ nav li {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   height: 40px;
 
@@ -701,6 +701,12 @@ input.FormField::-webkit-input-placeholder {
 }
 input.FormField2::-webkit-input-placeholder {
   color: white;
+}
+input.addblogtitle::-webkit-input-placeholder {
+  color: black;
+}
+textarea.addblogcontent::-webkit-input-placeholder {
+  color: black;
 }
 .amrithaLogin {
   padding-top: 17px;
