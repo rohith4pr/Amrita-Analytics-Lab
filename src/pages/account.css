@@ -1,30 +1,45 @@
-/* .RecentBlogs{
-}
-.BlogRecentHeader{
- } */
+
  .lower-body-container{
   margin: 20px 150px;
-  /* background-color: blue; */
  }
 
  .upper-body-container{
-  /* background-color: #000000; */
     margin: 10px 150px;
 }
 
 .about-container{
   padding: 30px 50px;
     width: 60%;
-    /* background-color: violet; */
  }
 
  .profile-pic-container{
    padding: 50px 50px;
-   
     width: 40%;
-    /* background-color: red; */
     align-items: center;
  }
 
- 
+.BlogRecentHeaderrr{
+  font-family: 'montserrat';
+  font-weight: bold;
+  color: #000000;
 
+}
+.BlogRecentHead{
+  font-family: 'montserrat';
+  font-weight: bold;
+  color: #000000;
+  font-size: larger;
+}
+
+.blog-text{
+  font-family: 'montserrat';
+
+}
+.profile-pic{
+  border-color: red;
+  border-width: 10px;
+}
+
+.about-me{
+  background-color: red;
+}
