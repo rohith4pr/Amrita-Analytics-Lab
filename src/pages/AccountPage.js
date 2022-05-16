@@ -37,10 +37,13 @@ const AccountPage = ({user,setUser}) => {
 
         return(
             <div style={{display:'flex'}}>
-                <div> 
-                    {title_info}:
+                <div style={{width:'18%'}} className="BlogRecentHeaderrr"> 
+                    {title_info}
                 </div>
-                <div  style={{marginLeft:'150px'}}>
+                <div>
+                    :
+                </div>
+                <div  style={{marginLeft:'50px'}} className="BlogRecentHeaderr">
                     {details}
                 </div>
                 <div>
@@ -52,7 +55,7 @@ const AccountPage = ({user,setUser}) => {
 
     const BlogPage = ({blog_content}) =>{
         return(
-            <div style={{marginBottom:'30px'}}>
+            <div style={{marginBottom:'30px'}} className="blog-text">
                 {blog_content}
             </div>
         )
@@ -61,16 +64,16 @@ const AccountPage = ({user,setUser}) => {
 
         return(
             <div className="RecentBlogs">
-                <div style={{fontSize: '18px'}} className="BlogRecentHeader">
-                    {title}:
+                <div style={{fontSize: '18px', fontFamily:'montserrat'}}  >
+                    <h3>{title}:</h3>
                 </div>
                 <div style={{marginRight: '60px'}}>
                     {content}
                 </div>
-                <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader">
+                <div style={{fontSize: '18px',alignItems:'center',fontWeight:'bold'}} className="BlogRecentHeaderr">
                     Read more 
                 </div>
-                <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader">
+                <div style={{fontSize: '18px',alignItems:'center',fontWeight:'bold'}} className="BlogRecentHeaderr">
                     Edit
                 </div>
             </div>
@@ -85,17 +88,17 @@ const AccountPage = ({user,setUser}) => {
             <div style={{display:'flex',flexDirection:'column'}} className="Home"> {/* dividing the body into two */}
                 <div style={{display:'flex'}} className="upper-body-container"> {/* the upper part  */}
                     <div style={{dsiplay:'flex',flexDirection:'column'}} className="profile-pic-container"> {/* the upper part with profile pic */}
-                            <div> {/* profile pic */}
+                            <div style={{display:'flex', justifyContent:'center'}} className="profile-pic"> {/* profile pic */}
                                     <div> {/* photo */}
-                                        <img alt="user" src={man} style={{width:'150px', borderRadius:'70px'}}></img>
+                                        <img src={man} style={{width:'150px', borderRadius:'70px',borderColor:"red",borderWidth:'30px'}}></img>
                                     </div>
                                     <div>  {/* photo edit button */}
 
                                     </div>
                             </div>
-                            <div style={{diplay:'flex'}}> {/* profile name */}
+                            <div> {/* profile name */}
                                     <div> {/* name */}
-                                        <p>Sanjay c</p>
+                                        <h3 style={{display:'flex',justifyContent:'center',fontFamily:'montserrat'}}>Sanjay cp</h3>
                                     </div>
                                     <div>  {/* name edit button */}
 
@@ -104,7 +107,7 @@ const AccountPage = ({user,setUser}) => {
                     </div> 
                     <div style={{display:'flex',flexDirection:'column'}} className="about-container"> {/* the upper part with about me */}
                             <div> {/* about me */}
-                                <h2>About me</h2>
+                                <h2 style={{fontSiza:'30px'}}>About me</h2>
                             </div>
                             {blog_Content.map((blog) => <BlogPage blog_content={blog["blog-content2"]} />)}
                             {titleContents.map((blog) => <InfoPage title_info={blog["title-content"]} details={blog["title-info"]}/>)}
@@ -112,7 +115,7 @@ const AccountPage = ({user,setUser}) => {
                 </div>
                 <div style={{display:'flex',flexDirection:'column'}} className="lower-body-container"> {/* the part with blogs */}
                     <div>
-                            <h2 style={{paddingLeft:'75px',paddingTop:'40px'}}>Your Blogs</h2>
+                            <h2 style={{paddingLeft:'75px',paddingTop:'40px'}}  className='about-me'>Your Blogs</h2>
                     </div>
                     {blogContents.map((blog) => <RecentPostInfo content={blog["blog-content"]} title={blog["blog-title"]}/>)}
                 </div>
