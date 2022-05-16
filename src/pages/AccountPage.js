@@ -2,7 +2,7 @@ import NavBar from '../NavBar';
 import { useEffect } from 'react';
 import './account.css';
 import man from '../man.svg';
-import BlogPage from './BlogPage';
+// import BlogPage from './BlogPage';
 
 const AccountPage = ({user,setUser}) => {
 
@@ -87,7 +87,7 @@ const AccountPage = ({user,setUser}) => {
                     <div style={{dsiplay:'flex',flexDirection:'column'}} className="profile-pic-container"> {/* the upper part with profile pic */}
                             <div> {/* profile pic */}
                                     <div> {/* photo */}
-                                        <img src={man} style={{width:'150px', borderRadius:'70px'}}></img>
+                                        <img alt="user" src={man} style={{width:'150px', borderRadius:'70px'}}></img>
                                     </div>
                                     <div>  {/* photo edit button */}
 
