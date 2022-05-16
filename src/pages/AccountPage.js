@@ -90,7 +90,7 @@ const AccountPage = ({user,setUser}) => {
                     <div style={{dsiplay:'flex',flexDirection:'column'}} className="profile-pic-container"> {/* the upper part with profile pic */}
                             <div style={{display:'flex', justifyContent:'center'}} className="profile-pic"> {/* profile pic */}
                                     <div> {/* photo */}
-                                        <img src={man} style={{width:'150px', borderRadius:'70px',borderColor:"red",borderWidth:'30px'}}></img>
+                                        <img alt="pic" src={man} style={{width:'150px', borderRadius:'70px',borderColor:"red",borderWidth:'30px'}}></img>
                                     </div>
                                     <div>  {/* photo edit button */}
 
