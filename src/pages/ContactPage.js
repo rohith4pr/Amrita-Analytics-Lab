@@ -3,9 +3,13 @@ import Call from '../Call.svg';
 import Email from '../Email.svg';
 import Time from '../Time.svg';
 import Place from '../Place.svg';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const ContactPage = ({user,setUser}) => {
+
+    const [name,setName] = useState("");
+    const [email,setEmail] = useState("");
+    const [message,set] = useState("");
     useEffect(() => {
         document.title = "Contact"
      }, []);
