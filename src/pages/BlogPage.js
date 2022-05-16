@@ -90,7 +90,7 @@ const BlogPage = ({user,setUser}) => {
         return(
             <div className="RecentBlogs">
                 <div className="picturesBlogs">
-                    <img alt="pic"  src={imgsrc}></img>
+                    <img src={imgsrc} alt="pic"></img>
                 </div>
                 <div style={{marginTop : '40px'}} className="BlogRecentHeader">
                     {title}:
