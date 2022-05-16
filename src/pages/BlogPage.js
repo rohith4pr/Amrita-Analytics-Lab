@@ -1,20 +1,42 @@
 import Footer from "../Footer";
 import NavBar from "../NavBar";
 import Readmore from "../Readmore.svg";
-import Blogpic from "../blogrecentpic.svg"
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import { NavLink } from 'react-router-dom';
 
 const BlogPage = ({user,setUser}) => {
-    useEffect(() => {
+
+    const [blogContent,setBlogContent] = useState("");
+    const fetchData = async () => {
+       
+        const res = await fetch(`/api/get-all-blogs`, {
+            method: 'get',
+            body: JSON.stringify(),
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const body = await res.json();
+        var propertyNames = Object.keys(body);
+        if (propertyNames.length !== 0){
+            setBlogContent(body);
+        }
+        
+        
+      
+    }
+    
+
+    useEffect( () => {
         document.title = "Blogs"
+        fetchData()
      }, []);
 
-    const blogContents = [
-            {"blog-title":"Blog 1", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-            {"blog-title":"Blog 2", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-            {"blog-title":"Blog 3", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
-        ]
+    // const blogContents = [
+    //         {"blog-title":"Blog 1", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    //         {"blog-title":"Blog 2", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    //         {"blog-title":"Blog 3", "blog-content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+    //     ]
     
     const AddBlog = () => {
         return(
@@ -53,7 +75,7 @@ const BlogPage = ({user,setUser}) => {
                     {title}:
                 </div>
                 <div style={{marginRight: '60px'}}>
-                    {content}
+                    {content.substring(0,100)}
                 </div>
                 <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader">
                     Read more 
@@ -63,18 +85,18 @@ const BlogPage = ({user,setUser}) => {
         )
     }
 
-    const RecentPostExpandInfo = () =>{
+    const RecentPostExpandInfo = ({content,title,imgsrc}) =>{
 
         return(
             <div className="RecentBlogs">
                 <div className="picturesBlogs">
-                    <img alt="pic"  src={Blogpic}></img>
+                    <img alt="pic"  src={imgsrc}></img>
                 </div>
                 <div style={{marginTop : '40px'}} className="BlogRecentHeader">
-                    Blog Post 1:
+                    {title}:
                 </div>
                 <div >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    {content.substring(0,100)}
                 </div>
                 <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader">
                     Read more 
@@ -111,14 +133,15 @@ const BlogPage = ({user,setUser}) => {
                         <div style={{marginTop : '40px'}} className="BlogRecentHeaderMain">
                             Recents
                         </div>
-                        {blogContents.map((blog) => <RecentPostInfo content={blog["blog-content"]} title={blog["blog-title"]}/>)}
+                        {(blogContent !=="") && blogContent.map((blog) => <RecentPostInfo content={blog["Blog_content"]} title={blog["Blog_title"]}/>)}
                         
                     </div>
                     <div className="blogSection2" >
-                        <AddBlog/>
-
-                        <RecentPostExpandInfo/>
-                        <RecentPostExpandInfo/>
+                        {(user !=="") ? (
+                            <AddBlog/>
+                        ) :(null)}
+                        
+                        { (blogContent !=="") && blogContent.map((blog) => <RecentPostExpandInfo content={blog["Blog_content"]} title={blog["Blog_title"]}  imgsrc={blog["Blog_img"]}/>)}
                     </div>
                     <div className="blogSection3" >
                         <div className="Contributors">

@@ -1,15 +1,45 @@
-.RecentBlogs{
-  margin-top: 40px;
-  margin-left: 80px;
-  margin-right: 80px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: #000000;
-}
-.BlogRecentHeader{
-  font-size: 30px;
-  line-height: 45px;
+
+ .lower-body-container{
+  margin: 20px 150px;
  }
+
+ .upper-body-container{
+    margin: 10px 150px;
+}
+
+.about-container{
+  padding: 30px 50px;
+    width: 60%;
+ }
+
+ .profile-pic-container{
+   padding: 50px 50px;
+    width: 40%;
+    align-items: center;
+ }
+
+.BlogRecentHeaderrr{
+  font-family: 'montserrat';
+  font-weight: bold;
+  color: #000000;
+
+}
+.BlogRecentHead{
+  font-family: 'montserrat';
+  font-weight: bold;
+  color: #000000;
+  font-size: larger;
+}
+
+.blog-text{
+  font-family: 'montserrat';
+
+}
+.profile-pic{
+  border-color: red;
+  border-width: 10px;
+}
+
+.about-me{
+  background-color: red;
+}
