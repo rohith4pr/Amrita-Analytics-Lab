@@ -7,16 +7,16 @@ const AddBlog = ({user,setUser}) => {
     let navigate = useNavigate();
     const [title,setTitle] = useState("");
     const [content,setContent] = useState("");
+    const [fileUpload,setFileUpload] = useState("");
     if(user === ""){
         navigate("/blogs");
     }
-
-    const picLink= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj1cbtHrCxTGHJ4la-6fBeY670i0Drg92lUg&usqp=CAU";
+    
 
     const submitBlog = async () =>{
         const result = await fetch(`/api/add-blog`, {
             method: 'post',
-            body: JSON.stringify({ user, title, content, picLink}),
+            body: JSON.stringify({ user, title, content, fileUpload}),
             headers: {
                 'Content-Type': 'application/json',
             }
@@ -41,7 +41,7 @@ const AddBlog = ({user,setUser}) => {
                     </div>
                     <div style={{display:'flex', marginLeft:'210px'}}>
                         <div className="AttachFile" style={{display:'flex', flexDirection:'column', alignItems:'center', background:"#F2F2F2", borderRadius:'10px', width: "215px", justifyContent: 'center'}}>
-                            Attach File
+                        <input value={fileUpload} onChange={(e) => setFileUpload(e.target.files[0])} type="file" className="addblogtitle" placeholder="Title" name="title" id='title' accept="image/*" required/>
                         </div>
                         
                     </div>
