@@ -46,8 +46,8 @@ const AccountPage = ({user,setUser}) => {
                 <div  style={{marginLeft:'50px'}} className="BlogRecentHeaderr">
                     {details}
                 </div>
-                <div>
-                    {/* Edit button here */}
+                <div style={{marginBottom:'34px'}}>
+
                 </div>
             </div>
         )
@@ -86,7 +86,7 @@ const AccountPage = ({user,setUser}) => {
                 <NavBar user={user} setUser={setUser}/>
             </div>
             <div style={{display:'flex',flexDirection:'column'}} className="Home"> {/* dividing the body into two */}
-                <div style={{display:'flex'}} className="upper-body-container"> {/* the upper part  */}
+                <div style={{display:'flex',marginBottom:'0px'}} className="upper-body-container"> {/* the upper part  */}
                     <div style={{dsiplay:'flex',flexDirection:'column'}} className="profile-pic-container"> {/* the upper part with profile pic */}
                             <div style={{display:'flex', justifyContent:'center'}} className="profile-pic"> {/* profile pic */}
                                     <div> {/* photo */}
@@ -113,9 +113,9 @@ const AccountPage = ({user,setUser}) => {
                             {titleContents.map((blog) => <InfoPage title_info={blog["title-content"]} details={blog["title-info"]}/>)}
                     </div> 
                 </div>
-                <div style={{display:'flex',flexDirection:'column'}} className="lower-body-container"> {/* the part with blogs */}
+                <div style={{display:'flex',flexDirection:'column',marginTop:'0px'}} className="lower-body-container"> {/* the part with blogs 2 */}
                     <div>
-                            <h2 style={{paddingLeft:'75px',paddingTop:'40px'}}  className='about-me'>Your Blogs</h2>
+                            <h2 style={{paddingLeft:'75px',paddingTop:'40px',marginTop:'0px',marginBottom:'0px'}}  className='about-me'>Your Blogs</h2>
                     </div>
                     {blogContents.map((blog) => <RecentPostInfo content={blog["blog-content"]} title={blog["blog-title"]}/>)}
                 </div>
