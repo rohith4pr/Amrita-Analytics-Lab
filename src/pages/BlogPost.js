@@ -64,7 +64,6 @@ const BlogPost = ({user,setUser,currentBlog}) => {
         const date = new Date(time.substring(0,4),month-1,time.substring(8,10));
         const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
         const currMonth = months[date.getMonth()]; 
-        console.log(`${date.getDate()} ${currMonth} ${date.getFullYear()}`);
         return(`${date.getDate()} ${currMonth} ${date.getFullYear()}`);
      }
      
@@ -148,7 +147,7 @@ const BlogPost = ({user,setUser,currentBlog}) => {
                         <div className="blogResponsive" style={{marginTop:'30px'}}>
                             <div className="blogpostrightTopText" style={{display:'flex', flexDirection :'column', justifyContent: 'left', flexBasis: '40%', paddingLeft: '20px'}}>
                                 <div>
-                                {(blogContent === "") ? `No data available !`: calculateDate}
+                                {(blogContent === "") ? `No data available !`: calculateDate()}
                                 </div>
                                 <div className="blogPostHeadding" style={{textAlign: 'left'}}>
                                     {(blogContent === "") ? `No data available !`: blogContent["Blog_title"]}
