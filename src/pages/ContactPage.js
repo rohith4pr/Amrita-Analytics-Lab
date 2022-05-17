@@ -9,10 +9,30 @@ const ContactPage = ({user,setUser}) => {
 
     const [name,setName] = useState("");
     const [email,setEmail] = useState("");
-    const [message,set] = useState("");
+    const [message,setMessage] = useState("");
+
     useEffect(() => {
         document.title = "Contact"
      }, []);
+    
+    const sendCommunication = async () =>{
+        const result = await fetch(`/api/send-contact`, {
+            method: 'post',
+            body: JSON.stringify({ name, email, message}),
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        alert("Email sent to the Admin !");
+        if(result === ""){
+            console.log(result.json());
+        }
+        setName("");
+        setEmail("");
+        setMessage("");
+        return;
+    }
+
     return(
         <div>
             <NavBar className="sidebyside" user={user} setUser={setUser}/>
@@ -21,10 +41,10 @@ const ContactPage = ({user,setUser}) => {
                     <div className='contactUs'>
                         Contact Us
                     </div>
-                        <input style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="NAME" name="name" id='name' required />
-                        <input style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="EMAIL" name="name" id='email' required />
-                        <input style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="MESSAGES" name="name" id='messages' required />
-                    <div className='buttonstuffSend'>
+                        <input value={name} onChange={(e) => setName(e.target.value)} style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="NAME" name="name" id='name' required />
+                        <input value={email} onChange={(e) => setEmail(e.target.value)} style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="EMAIL" name="name" id='email' required />
+                        <input value={message} onChange={(e) => setMessage(e.target.value)} style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="MESSAGES" name="name" id='messages' required />
+                    <div onClick={sendCommunication} className='buttonstuffSend'>
                         SEND
                     </div>
 

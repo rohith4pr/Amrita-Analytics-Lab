@@ -11,7 +11,7 @@ const AddBlog = ({user,setUser}) => {
         navigate("/blogs");
     }
 
-    const picLink= "hello";
+    const picLink= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj1cbtHrCxTGHJ4la-6fBeY670i0Drg92lUg&usqp=CAU";
 
     const submitBlog = async () =>{
         const result = await fetch(`/api/add-blog`, {

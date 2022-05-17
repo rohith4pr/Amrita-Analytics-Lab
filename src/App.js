@@ -19,6 +19,7 @@ import AccountPage from './pages/AccountPage';
 function App() {
 
   const [user,setUser] = useState("");
+  const [currentBlog,setCurrentBlog] = useState("");
 
   return (
     <Router>
@@ -26,11 +27,11 @@ function App() {
         <div>
           <Routes>
             <Route exact path="/" element={<HomeMain user={user} setUser={setUser} />} />
-            <Route path="/blogs" element={<BlogPage user={user} setUser={setUser} />} />
+            <Route path="/blogs" element={<BlogPage currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} user={user} setUser={setUser} />} />
             <Route path="/login" element={<LoginPage user={user} setUser={setUser} />} />
             <Route path="/services" element={<ServicesPage user={user} setUser={setUser} />} />
             <Route path="/contact" element={<ContactPage user={user} setUser={setUser} />} />
-            <Route path="/blogs/blogpost" element={<BlogPost user={user} setUser={setUser} />} />
+            <Route path="/blogs/blogpost" element={<BlogPost currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} user={user} setUser={setUser} />} />
             <Route path="/signup" element={<SignUp user={user} setUser={setUser} />} />
             <Route path="/addblog" element={<AddBlog user={user} setUser={setUser} />} />
             <Route path="/account" element={<AccountPage user={user} setUser={setUser} />} />

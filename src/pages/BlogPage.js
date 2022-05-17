@@ -4,9 +4,10 @@ import Readmore from "../Readmore.svg";
 import { useEffect,useState } from "react";
 import { NavLink } from 'react-router-dom';
 
-const BlogPage = ({user,setUser}) => {
+const BlogPage = ({user,setUser,currentBlog,setCurrentBlog}) => {
 
     const [blogContent,setBlogContent] = useState("");
+    const [blogContentContributers,setBlogContentContributers] = useState("");
     const fetchData = async () => {
        
         const res = await fetch(`/api/get-all-blogs`, {
@@ -25,11 +26,31 @@ const BlogPage = ({user,setUser}) => {
         
       
     }
+
+    const fetchContributers = async () => {
+       
+        const res = await fetch(`/api/get-all-contributers`, {
+            method: 'get',
+            body: JSON.stringify(),
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const body = await res.json();
+        var propertyNames = Object.keys(body);
+        if (propertyNames.length !== 0){
+            setBlogContentContributers(body);
+        }
+        
+        
+      
+    }
     
 
     useEffect( () => {
         document.title = "Blogs"
         fetchData()
+        fetchContributers()
      }, []);
 
     // const blogContents = [
@@ -67,7 +88,7 @@ const BlogPage = ({user,setUser}) => {
         )
     }
 
-    const RecentPostInfo = ({content,title}) =>{
+    const RecentPostInfo = ({content,title,id}) =>{
 
         return(
             <div className="RecentBlogs">
@@ -76,21 +97,23 @@ const BlogPage = ({user,setUser}) => {
                 </div>
                 <div style={{marginRight: '60px'}}>
                     {content.substring(0,100)}
-                </div>
-                <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader">
+                </div>BlogPost
+                <NavLink onClick={() => setCurrentBlog(id)}  style={{textDecoration: '18px'}}  to="/blogs/blogpost"> 
+                <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader" >
                     Read more 
                     <img alt="read more" src={Readmore}></img>
                 </div>
+                </NavLink>
             </div>
         )
     }
 
-    const RecentPostExpandInfo = ({content,title,imgsrc}) =>{
+    const RecentPostExpandInfo = ({content,title,imgsrc,id}) =>{
 
         return(
             <div className="RecentBlogs">
                 <div className="picturesBlogs">
-                    <img alt="pic"  src={imgsrc}></img>
+                    <img src={imgsrc} alt="pic"></img>
                 </div>
                 <div style={{marginTop : '40px'}} className="BlogRecentHeader">
                     {title}:
@@ -98,29 +121,38 @@ const BlogPage = ({user,setUser}) => {
                 <div >
                     {content.substring(0,100)}
                 </div>
-                <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader">
+                <NavLink onClick={() => setCurrentBlog(id)}  style={{textDecoration: '18px'}}  to="/blogs/blogpost"> 
+                <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader" >
                     Read more 
                     <img alt="read more" src={Readmore}></img>
                 </div>
+                </NavLink>
             </div>
         )
     }
 
-    const ContributorsInfo = () =>{
+    const ContributorsInfo = ({Author_id,count,time,Firstname,Secondname}) =>{
+        const month = parseInt(time.substring(5,7));
+        const date = new Date(time.substring(0,4),month-1,time.substring(8,10));
+        const dateCurrent  = new Date();
+        const diffTime = Math.abs(dateCurrent - date);
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
+        const fullName = Firstname+ " "+Secondname;
 
         return(
             <div  >
                 <div style={{fontSize: '18px',marginBottom:'0px',lineHeight:'20px'}} className="BlogRecentHeader">
-                    · Raed Majeed
+                    · {fullName}
                 </div>
                 <div style={{marginLeft:'10px',marginTop:'0px',fontSize: '15px',fontFamily: 'Poppins',fontStyle: 'normal'}}>
-                    1d ago · 34 blogs
+                    {(diffDays === 0) ? `Today` : `${diffDays}d ago`} · {count} blogs
                 </div>
                 
             </div>
         )
     }   
     return(
+        
     
         <div>
             <NavBar user={user} setUser={setUser}/>
@@ -133,7 +165,7 @@ const BlogPage = ({user,setUser}) => {
                         <div style={{marginTop : '40px'}} className="BlogRecentHeaderMain">
                             Recents
                         </div>
-                        {(blogContent !=="") && blogContent.map((blog) => <RecentPostInfo content={blog["Blog_content"]} title={blog["Blog_title"]}/>)}
+                        {(blogContent !=="") && blogContent.map((blog) => <RecentPostInfo id={blog["id"]} content={blog["Blog_content"]} title={blog["Blog_title"]}/>)}
                         
                     </div>
                     <div className="blogSection2" >
@@ -141,7 +173,7 @@ const BlogPage = ({user,setUser}) => {
                             <AddBlog/>
                         ) :(null)}
                         
-                        { (blogContent !=="") && blogContent.map((blog) => <RecentPostExpandInfo content={blog["Blog_content"]} title={blog["Blog_title"]}  imgsrc={blog["Blog_img"]}/>)}
+                        { (blogContent !=="") && blogContent.map((blog) => <RecentPostExpandInfo id={blog["id"]} content={blog["Blog_content"]} title={blog["Blog_title"]}  imgsrc={blog["Blog_img"]}/>)}
                     </div>
                     <div className="blogSection3" >
                         <div className="Contributors">
@@ -149,10 +181,8 @@ const BlogPage = ({user,setUser}) => {
                                 Contributors
                                 
                             </div>
-                            <ContributorsInfo/>
-                            <ContributorsInfo/>
-                            <ContributorsInfo/>
-                            <ContributorsInfo/>
+                            { (blogContentContributers !=="") && blogContentContributers.map((blog) => <ContributorsInfo Author_id={blog["Author_id"]} Firstname={blog["First_name"]} Secondname={blog["Second_name"]} count={blog["count"]}  time={blog["time"]}/>)}
+                            
 
                         </div>
                         

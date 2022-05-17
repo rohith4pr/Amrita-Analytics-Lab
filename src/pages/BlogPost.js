@@ -7,12 +7,35 @@ import facebook from "../Facebook.svg";
 import linkedin from "../LinkedIn.svg";
 import pinterest from "../Pinterest.svg";
 import computer from "../computer.svg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const BlogPost = ({user,setUser}) => {
+const BlogPost = ({user,setUser,currentBlog}) => {
+    const [blogContent,setBlogContent] = useState("");
+    const [blogContentContributers,setBlogContentContributers] = useState("");
+    const fetchData = async () => {
+       
+        const res = await fetch(`/api/get-one-blogs`, {
+            method: 'get',
+            body: JSON.stringify(),
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const body = await res.json();
+        var propertyNames = Object.keys(body);
+        if (propertyNames.length !== 0){
+            setBlogContent(body);
+        }
+        
+        
+      
+    }
+
     useEffect(() => {
         document.title = "BlogPost"
      }, []);
+
+     
     return(
         <div className="App">
             <div>
