@@ -429,6 +429,13 @@ nav li {
 
 }
 
+.BlogContentinside{
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+
+}
+
 .RecentBlogs{
   margin-top: 40px;
   margin-left: 80px;

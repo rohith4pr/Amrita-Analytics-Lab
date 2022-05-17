@@ -111,7 +111,7 @@ const BlogPage = ({user,setUser,currentBlog,setCurrentBlog}) => {
     const RecentPostExpandInfo = ({content,title,imgsrc,id}) =>{
 
         return(
-            <div className="BlogContent">
+            <div className="BlogContentinside">
                 <div className="picturesBlogs">
                     <img src={imgsrc} alt="pic"></img>
                 </div>
