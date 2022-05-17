@@ -173,12 +173,15 @@ nav li {
   font-size: 16px;
   line-height: 20px;
   height: 40px;
-
   letter-spacing: 0.1em;
-
   color: #000000;
   margin-top: 30px;
 
+}
+
+.SubmitButton:hover{
+  cursor: pointer;
+  background: #d1d1d1;
 }
 
 .addblogcontent{
@@ -429,7 +432,7 @@ nav li {
 .RecentBlogs{
   margin-top: 40px;
   margin-left: 80px;
-  margin-right: 80px;
+  margin-right: 10px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
