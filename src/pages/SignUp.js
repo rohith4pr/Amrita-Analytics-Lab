@@ -27,7 +27,14 @@ const SignUp = ({user,setUser}) =>{
 
     const result = await fetch(`/api/signup-user-auth`, {
         method: 'post',
-        body: JSON.stringify({ tempUser, tempPassword,  tempUserFirstname, tempUserSecondname}),
+        body: JSON.stringify({ tempUser, tempPassword,  tempUserFirstname, tempUserSecondname, 
+                                "social" : {
+                                  "twitter" : "",
+                                  "instagram" : "",
+                                  "facebook" : "",
+                                  "linkedin" : "",
+                                  "pinterest" : ""
+                                }}),
         headers: {
             'Content-Type': 'application/json',
         }

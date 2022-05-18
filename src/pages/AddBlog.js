@@ -7,16 +7,40 @@ const AddBlog = ({user,setUser}) => {
     let navigate = useNavigate();
     const [title,setTitle] = useState("");
     const [content,setContent] = useState("");
+    //const [picLink,setPicLink] = useState("");
     const [fileUpload,setFileUpload] = useState("");
     if(user === ""){
         navigate("/blogs");
     }
     
-
     const submitBlog = async () =>{
+
+        
+        const formData = new FormData();
+
+		formData.append('file', fileUpload);
+        const result = await fetch(`/api/add-blog-pic`, {
+            method: 'post',
+            body: formData,
+            
+        });
+        const body = await result.json();
+        var propertyNames = Object.keys(body);
+        if (propertyNames.length !== 0){
+            
+            console.log(body["res"]);
+            submitBlogFinal(body["res"]);
+            
+        }
+        
+    }
+    
+    const submitBlogFinal = async (picLink) =>{
+        
+        console.log(picLink);
         const result = await fetch(`/api/add-blog`, {
             method: 'post',
-            body: JSON.stringify({ user, title, content, fileUpload}),
+            body: JSON.stringify({ user, title, content, picLink}),
             headers: {
                 'Content-Type': 'application/json',
             }
@@ -41,7 +65,7 @@ const AddBlog = ({user,setUser}) => {
                     </div>
                     <div style={{display:'flex', marginLeft:'210px'}}>
                         <div className="AttachFile" style={{display:'flex', flexDirection:'column', alignItems:'center', background:"#F2F2F2", borderRadius:'10px', width: "215px", justifyContent: 'center'}}>
-                        <input value={fileUpload} onChange={(e) => setFileUpload(e.target.files[0])} type="file" className="addblogtitle" placeholder="Title" name="title" id='title' accept="image/*" required/>
+                        <input  onChange={(e) => setFileUpload(e.target.files[0])} type="file" className="addblogtitle" placeholder="Title" name="title" id='title' accept="image/*" required/>
                         </div>
                         
                     </div>

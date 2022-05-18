@@ -173,7 +173,7 @@ const BlogPage = ({user,setUser,currentBlog,setCurrentBlog}) => {
                             <AddBlog/>
                         ) :(null)}
                         
-                        { (blogContent !=="") && blogContent.map((blog) => <RecentPostExpandInfo id={blog["id"]} content={blog["Blog_content"]} title={blog["Blog_title"]}  imgsrc={blog["Blog_img"]}/>)}
+                        { (blogContent !=="") && blogContent.map((blog) => <RecentPostExpandInfo id={blog["id"]} content={blog["Blog_content"]} title={blog["Blog_title"]}  imgsrc={ "/api/blog-images/"+blog["Blog_img"]}/>)}
                     </div>
                     <div className="blogSection3" >
                         <div className="Contributors">

@@ -26,7 +26,7 @@ const BlogPost = ({user,setUser,currentBlog}) => {
         var propertyNames = Object.keys(body);
         if (propertyNames.length !== 0 && blogContentContributers === ""){
             setBlogContentContributers(body[0]);
-            
+            console.log(body[0]["Social"]);
         }
         
         
@@ -154,7 +154,7 @@ const BlogPost = ({user,setUser,currentBlog}) => {
                                 </div>
                             </div>
                             <div style={{display:'flex'}}>
-                                <img src={(blogContent === "") ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBU2RkcXhDDRZw4IFAWkFwiPu_FisnD7B5Hg&usqp=CAU' : blogContent["Blog_img"]} style={{width:'500px', marginRight:'10px'}} alt='pic'/>
+                                <img src={(blogContent === "") ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBU2RkcXhDDRZw4IFAWkFwiPu_FisnD7B5Hg&usqp=CAU' : "/api/blog-images/"+blogContent["Blog_img"]} style={{width:'500px', marginRight:'10px'}} alt='pic'/>
                             </div>
                         </div>
                         <div style={{margin:'20px', marginTop:'40px'}}>
