@@ -26,7 +26,7 @@ const BlogPost = ({user,setUser,currentBlog}) => {
         var propertyNames = Object.keys(body);
         if (propertyNames.length !== 0 && blogContentContributers === ""){
             setBlogContentContributers(body[0]);
-            console.log(body[0]["Social"]);
+            //console.log(body[0]["Social"]);
         }
         
         
@@ -69,6 +69,11 @@ const BlogPost = ({user,setUser,currentBlog}) => {
      
     return(
         <div className="App">
+            <style>
+                {`#p-wrap {
+                white-space: pre-line;
+                }`}
+            </style>
             <div>
                 <NavBar user={user} setUser={setUser}/>
             </div>
@@ -158,7 +163,8 @@ const BlogPost = ({user,setUser,currentBlog}) => {
                             </div>
                         </div>
                         <div style={{margin:'20px', marginTop:'40px'}}>
-                            {(blogContent === "") ? `No data available !`: blogContent["Blog_content"]}
+                            <p id="p-wrap">{(blogContent === "") ? `No data available !`: blogContent["Blog_content"]}</p>
+                            
                         </div>
                 </div>
             </div>
