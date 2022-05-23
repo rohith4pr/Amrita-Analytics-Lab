@@ -17,7 +17,7 @@ const AddBlog = ({user,setUser}) => {
 
         
         const formData = new FormData();
-
+        
 		formData.append('file', fileUpload);
         const result = await fetch(`/api/add-blog-pic`, {
             method: 'post',
@@ -37,10 +37,10 @@ const AddBlog = ({user,setUser}) => {
     
     const submitBlogFinal = async (picLink) =>{
         
-        console.log(picLink);
+        const newContent = content.replaceAll("'","\\'");
         const result = await fetch(`/api/add-blog`, {
             method: 'post',
-            body: JSON.stringify({ user, title, content, picLink}),
+            body: JSON.stringify({ user, title, "content" : newContent, picLink}),
             headers: {
                 'Content-Type': 'application/json',
             }
