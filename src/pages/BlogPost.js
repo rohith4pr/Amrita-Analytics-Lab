@@ -25,8 +25,10 @@ const BlogPost = ({user,setUser,currentBlog}) => {
         const body = await res.json();
         var propertyNames = Object.keys(body);
         if (propertyNames.length !== 0 && blogContentContributers === ""){
+            const ssocial = JSON.parse(body[0]["Social"])
+            body[0]["Social"] = ssocial;
             setBlogContentContributers(body[0]);
-            console.log(body[0]["Social"]);
+            //console.log(body[0]["Social"].twitter);
         }
         
         
@@ -94,51 +96,62 @@ const BlogPost = ({user,setUser,currentBlog}) => {
                         About Me
                     </div>
                     <div className='headerright' style={{fontSize:'15px', marginBottom:'1px', marginTop:'1px', marginLeft:'60px', marginRight:'50px', textAlign:'left'}}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    {(blogContentContributers === "") ? `No data available`: blogContentContributers["Personal_info"]}
                     </div>
                     <div className='authorHeader' style={{fontSize:'20px', textAlign:'left', marginLeft:'60px'}}>
                         Contact Me
                     </div>
                     <div style={{display: "flex", justifyContent: 'left', flexDirection: 'column'}}>
                         <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                            {(blogContentContributers === "") ? ``: (blogContentContributers["Social"].twitter === "")? ``:
+                            (<>
                             <div>
                                 <img src={twitter} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
                             </div>
                             <div className='headerright' style={{fontSize:'15px'}}>
-                                /RaedMajeed
-                            </div>
+                                {blogContentContributers["Social"].twitter}
+                            </div></>)}
                         </div>
                         <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                        {(blogContentContributers === "") ? ``: (blogContentContributers["Social"].instagram === "")? ``:
+                            (<>
                             <div>
                                 <img src={instagram} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
                             </div>
                             <div className='headerright' style={{fontSize:'15px'}}>
-                                /RaedMajeed
-                            </div>
+                                {blogContentContributers["Social"].instagram}
+                            </div></>)}
+                            
                         </div>
                         <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                            {(blogContentContributers === "") ? ``: (blogContentContributers["Social"].facebook === "")? ``:
+                            (<>
                             <div>
-                                <img src={facebook} style={{width:'30px', marginRight:'10px', padding: '5px'}} alt='pic'/>
+                                <img src={facebook} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
                             </div>
                             <div className='headerright' style={{fontSize:'15px'}}>
-                                /RaedMajeed
-                            </div>
+                                {blogContentContributers["Social"].facebook}
+                            </div></>)}
                         </div>
                         <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                        {(blogContentContributers === "") ? ``: (blogContentContributers["Social"].facebook === "")? ``:
+                            (<>
                             <div>
                                 <img src={linkedin} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
                             </div>
                             <div className='headerright' style={{fontSize:'15px'}}>
-                                /RaedMajeed
-                            </div>
+                                {blogContentContributers["Social"].linkedin}
+                            </div></>)}
                         </div>
                         <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                            {(blogContentContributers === "") ? ``: (blogContentContributers["Social"].facebook === "")? ``:
+                            (<>
                             <div>
                                 <img src={pinterest} style={{width:'40px', marginRight:'10px'}} alt='pic'/>
                             </div>
                             <div className='headerright' style={{fontSize:'15px'}}>
-                                /RaedMajeed
-                            </div>
+                                {blogContentContributers["Social"].pinterest}
+                            </div></>)}
                         </div>
                     </div>
                     
@@ -153,12 +166,15 @@ const BlogPost = ({user,setUser,currentBlog}) => {
                                     {(blogContent === "") ? `No data available !`: blogContent["Blog_title"]}
                                 </div>
                             </div>
-                            <div style={{display:'flex'}}>
-                                <img src={(blogContent === "") ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBU2RkcXhDDRZw4IFAWkFwiPu_FisnD7B5Hg&usqp=CAU' : "/api/blog-images/"+blogContent["Blog_img"]} style={{width:'500px', marginRight:'10px'}} alt='pic'/>
+                            <div style={{display:'flex',flexGrow : '1'}}>
+                                <img style={{ maxWidth: "500px",marginRight:'10px'}} src={(blogContent === "") ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBU2RkcXhDDRZw4IFAWkFwiPu_FisnD7B5Hg&usqp=CAU' : "/api/blog-images/"+blogContent["Blog_img"]}  alt='pic'/>
                             </div>
                         </div>
                         <div style={{margin:'20px', marginTop:'40px'}}>
-                            {(blogContent === "") ? `No data available !`: blogContent["Blog_content"]}
+                            <pre style={{whiteSpace: "pre-wrap",fontFamily:"inherit"}}>
+                                {(blogContent === "") ? `No data available !`: blogContent["Blog_content"]}
+                            </pre>
+                            
                         </div>
                 </div>
             </div>
