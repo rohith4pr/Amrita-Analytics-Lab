@@ -8,10 +8,17 @@ import linkedin from "../LinkedIn.svg";
 import pinterest from "../Pinterest.svg";
 // import computer from "../computer.svg";
 import { useEffect, useState } from "react";
+import {  useNavigate } from 'react-router-dom';
 
 const BlogPost = ({user,setUser,currentBlog}) => {
     const [blogContent,setBlogContent] = useState("");
     const [blogContentContributers,setBlogContentContributers] = useState("");
+    let navigate = useNavigate();
+
+    // const timeout = async(ms) =>{
+    //     return new Promise((resolve) => setTimeout(resolve,ms));
+    // }
+
     const fetchDataContributer = async (authorId) => {
        
         
@@ -28,31 +35,37 @@ const BlogPost = ({user,setUser,currentBlog}) => {
             const ssocial = JSON.parse(body[0]["Social"])
             body[0]["Social"] = ssocial;
             setBlogContentContributers(body[0]);
-<<<<<<< HEAD
             //console.log(body[0]["Social"].twitter);
-=======
-            //console.log(body[0]["Social"]);
->>>>>>> 3f10ebbec538cbc336b64f91ea606221a0059909
         }
         
         
       
     }
     const fetchData = async () => {
+
+        const ssid = window.location.pathname.substring(16).search("/");
+        const blogId = window.location.pathname.substring(23+ssid);
+        //console.log(blogId);
        
         const res = await fetch(`/api/get-one-blog`, {
             method: 'post',
-            body: JSON.stringify({currentBlog}),
+            body: JSON.stringify({"currentBlog":blogId}),
             headers: {
                 'Content-Type': 'application/json',
             }
         });
         const body = await res.json();
         var propertyNames = Object.keys(body);
+        
         if (propertyNames.length !== 0 && blogContent === ""){
             setBlogContent(body[0]);
+            
             // eslint-disable-next-line
             fetchDataContributer(body[0]["Author_id"]);
+        }
+        //await timeout(1000);
+        if (propertyNames.length === 0){
+            navigate("/notfound");
         }
         
     }
@@ -180,13 +193,9 @@ const BlogPost = ({user,setUser,currentBlog}) => {
                             </div>
                         </div>
                         <div style={{margin:'20px', marginTop:'40px'}}>
-<<<<<<< HEAD
                             <pre style={{whiteSpace: "pre-wrap",fontFamily:"inherit"}}>
                                 {(blogContent === "") ? `No data available !`: blogContent["Blog_content"]}
                             </pre>
-=======
-                            <p id="p-wrap">{(blogContent === "") ? `No data available !`: blogContent["Blog_content"]}</p>
->>>>>>> 3f10ebbec538cbc336b64f91ea606221a0059909
                             
                         </div>
                 </div>

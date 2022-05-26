@@ -98,7 +98,7 @@ const BlogPage = ({user,setUser,currentBlog,setCurrentBlog}) => {
                 <div style={{marginRight: '60px'}}>
                     {content.substring(0,100)}
                 </div>BlogPost
-                <NavLink onClick={() => setCurrentBlog(id)}  style={{textDecoration: '18px'}}  to="/blogs/blogpost"> 
+                <NavLink onClick={() => setCurrentBlog(id)}  style={{textDecoration: '18px'}}  to={`/blogs/blogpost/${title}/blogid${id}`}> 
                 <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader" >
                     Read more 
                     <img alt="read more" src={Readmore}></img>
@@ -121,7 +121,7 @@ const BlogPage = ({user,setUser,currentBlog,setCurrentBlog}) => {
                 <div >
                     {content.substring(0,100)}
                 </div>
-                <NavLink onClick={() => setCurrentBlog(id)}  style={{textDecoration: '18px'}}  to="/blogs/blogpost"> 
+                <NavLink onClick={() => setCurrentBlog(id)}  style={{textDecoration: '18px'}}  to={`/blogs/blogpost/${title}/blogid${id}`}> 
                 <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader" >
                     Read more 
                     <img alt="read more" src={Readmore}></img>
@@ -165,7 +165,7 @@ const BlogPage = ({user,setUser,currentBlog,setCurrentBlog}) => {
                         <div style={{marginTop : '40px'}} className="BlogRecentHeaderMain">
                             Recents
                         </div>
-                        {(blogContent !=="") && blogContent.map((blog) => <RecentPostInfo id={blog["id"]} content={blog["Blog_content"]} title={blog["Blog_title"]}/>)}
+                        {(blogContent !=="") && blogContent.map((blog) => <RecentPostInfo key={blog["id"]} id={blog["id"]} content={blog["Blog_content"]} title={blog["Blog_title"]}/>)}
                         
                     </div>
                     <div className="blogSection2" >
@@ -173,7 +173,7 @@ const BlogPage = ({user,setUser,currentBlog,setCurrentBlog}) => {
                             <AddBlog/>
                         ) :(null)}
                         
-                        { (blogContent !=="") && blogContent.map((blog) => <RecentPostExpandInfo id={blog["id"]} content={blog["Blog_content"]} title={blog["Blog_title"]}  imgsrc={ "/api/blog-images/"+blog["Blog_img"]}/>)}
+                        { (blogContent !=="") && blogContent.map((blog) => <RecentPostExpandInfo key={blog["id"]} id={blog["id"]} content={blog["Blog_content"]} title={blog["Blog_title"]}  imgsrc={ "/api/blog-images/"+blog["Blog_img"]}/>)}
                     </div>
                     <div className="blogSection3" >
                         <div className="Contributors">
@@ -181,7 +181,7 @@ const BlogPage = ({user,setUser,currentBlog,setCurrentBlog}) => {
                                 Contributors
                                 
                             </div>
-                            { (blogContentContributers !=="") && blogContentContributers.map((blog) => <ContributorsInfo Author_id={blog["Author_id"]} Firstname={blog["First_name"]} Secondname={blog["Second_name"]} count={blog["count"]}  time={blog["time"]}/>)}
+                            { (blogContentContributers !=="") && blogContentContributers.map((blog) => <ContributorsInfo key={blog["id"]} Author_id={blog["Author_id"]} Firstname={blog["First_name"]} Secondname={blog["Second_name"]} count={blog["count"]}  time={blog["time"]}/>)}
                             
 
                         </div>

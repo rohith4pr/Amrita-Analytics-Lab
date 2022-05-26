@@ -31,7 +31,7 @@ function App() {
             <Route path="/login" element={<LoginPage user={user} setUser={setUser} />} />
             <Route path="/services" element={<ServicesPage user={user} setUser={setUser} />} />
             <Route path="/contact" element={<ContactPage user={user} setUser={setUser} />} />
-            <Route path="/blogs/blogpost" element={<BlogPost currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} user={user} setUser={setUser} />} />
+            <Route path="/blogs/blogpost/*" element={<BlogPost currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} user={user} setUser={setUser} />} />
             <Route path="/signup" element={<SignUp user={user} setUser={setUser} />} />
             <Route path="/addblog" element={<AddBlog user={user} setUser={setUser} />} />
             <Route path="/account" element={<AccountPage user={user} setUser={setUser} />} />
