@@ -28,7 +28,11 @@ const BlogPost = ({user,setUser,currentBlog}) => {
             const ssocial = JSON.parse(body[0]["Social"])
             body[0]["Social"] = ssocial;
             setBlogContentContributers(body[0]);
+<<<<<<< HEAD
             //console.log(body[0]["Social"].twitter);
+=======
+            //console.log(body[0]["Social"]);
+>>>>>>> 3f10ebbec538cbc336b64f91ea606221a0059909
         }
         
         
@@ -71,6 +75,11 @@ const BlogPost = ({user,setUser,currentBlog}) => {
      
     return(
         <div className="App">
+            <style>
+                {`#p-wrap {
+                white-space: pre-line;
+                }`}
+            </style>
             <div>
                 <NavBar user={user} setUser={setUser}/>
             </div>
@@ -171,9 +180,13 @@ const BlogPost = ({user,setUser,currentBlog}) => {
                             </div>
                         </div>
                         <div style={{margin:'20px', marginTop:'40px'}}>
+<<<<<<< HEAD
                             <pre style={{whiteSpace: "pre-wrap",fontFamily:"inherit"}}>
                                 {(blogContent === "") ? `No data available !`: blogContent["Blog_content"]}
                             </pre>
+=======
+                            <p id="p-wrap">{(blogContent === "") ? `No data available !`: blogContent["Blog_content"]}</p>
+>>>>>>> 3f10ebbec538cbc336b64f91ea606221a0059909
                             
                         </div>
                 </div>

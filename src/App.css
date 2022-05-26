@@ -753,10 +753,10 @@ input.contactUsEle::-webkit-input-placeholder {
   color: black;
 }
 input.FormField::-webkit-input-placeholder {
-  color: white;
+  color: black;
 }
 input.FormField2::-webkit-input-placeholder {
-  color: white;
+  color: black;
 }
 input.addblogtitle::-webkit-input-placeholder {
   color: black;
