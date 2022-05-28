@@ -92,11 +92,11 @@ const BlogPage = ({user,setUser,currentBlog,setCurrentBlog}) => {
 
         return(
             <div className="RecentBlogs">
-                <div style={{fontSize: '18px'}} className="BlogRecentHeader">
+                <div style={{fontSize: '25px'}} className="BlogRecentHeader">
                     {title}:
                 </div>
                 <div style={{marginRight: '60px'}}>
-                    {content.substring(0,100)}
+                    {content.substring(0,50)}
                 </div>BlogPost
                 <NavLink onClick={() => setCurrentBlog(id)}  style={{textDecoration: '18px'}}  to={`/blogs/blogpost/${title}/blogid${id}`}> 
                 <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader" >
