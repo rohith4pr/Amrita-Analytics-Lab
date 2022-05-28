@@ -63,11 +63,11 @@ const LoginPage = ({user,setUser}) => {
           { flag === 2 && <p className="hintFont">Your login credentials does not exist !</p>}
           <input value={tempPassword} onChange={(e) => setTempPassword(e.target.value)} style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" id='password' required />
           { flag === 3 && <p className="hintFont">Your login credentials could not be verified, please try again !</p>}
-          <div style={{display:'flex'}}>
-            <div onClick={ ()=>loginButtonAction() } className='buttonstuffLogin'>
+          <div style={{display:'flex',justifyContent:'flex-start'}}>
+            <div onClick={ ()=>loginButtonAction() } className="buttonstuffLogin">
               LOGIN
             </div>
-            <div className='buttonstuffSingup' style={{marginLeft:'100px'}}>
+            <div className='buttonstuffSingup'>
               <NavLink style={{ textDecoration:'inherit', color:'inherit' }}  to="/signup"> SIGNUP? </NavLink>
             </div>
           </div>
