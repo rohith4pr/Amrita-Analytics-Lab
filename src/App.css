@@ -14,6 +14,7 @@ nav {
   background: rgb(255, 255, 255);
 }
 
+
 nav ul {
   display: flex;
   list-style-type: none;
@@ -125,6 +126,10 @@ nav li {
   padding-top: 10px;
 }
 
+.logo img{
+  width:60px;
+}
+
 .Home {
   display: flex;
   padding-top: 100px;
@@ -180,7 +185,7 @@ nav li {
 .header{
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 1000;
+  font-weight: 800;
   font-size: 46px;
   line-height: 50px;
   text-align: center;
@@ -719,6 +724,7 @@ img {
   color: #FFFFFF;
 }
 
+
 .hintFont{
   margin-left: 40px;
   color: #4a4891;
@@ -1076,6 +1082,17 @@ input[type="password"]
 
 @media only screen and (max-width: 700px) {
 
+  .logo{
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .logo img{
+    width:30px;
+    padding-left: 0px;
+  }
+
+
   .blogpostrightTopText{
     margin-bottom: 50px;
   }
@@ -1126,11 +1143,15 @@ input[type="password"]
   }
 
   .amritha{
+    padding-left: 2px;
     font-size: 15px;
+    padding-bottom: 5px;
   }
 
   .amrithaINNER{
+    padding-left: 2px;
     font-size: 15px;
+    padding-bottom: 5px;
   }
 
   .sidebyside {
