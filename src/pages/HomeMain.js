@@ -18,7 +18,7 @@ const HomeMain = ({user,setUser}) => {
                 <NavBar user={user} setUser={setUser}/>
             </div>
             <div className='homeunderleft' style={{flexBasis: '45%'}}>
-                <div style={{display: 'flex', justifyContent: 'right', marginRight: '100px' }} >
+                <div style={{display: 'flex', justifyContent: 'right' }} >
                 <img style={{
                             width: '300px',
                             height: '400px',

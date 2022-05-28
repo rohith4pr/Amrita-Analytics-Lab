@@ -41,16 +41,16 @@ const ContactPage = ({user,setUser}) => {
                     <div className='contactUs'>
                         Contact Us
                     </div>
-                        <input value={name} onChange={(e) => setName(e.target.value)} style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="NAME" name="name" id='name' required />
-                        <input value={email} onChange={(e) => setEmail(e.target.value)} style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="EMAIL" name="name" id='email' required />
-                        <input value={message} onChange={(e) => setMessage(e.target.value)} style={{borderBottom: '1px solid #000000'}}type="email" className='contactUsEle' placeholder="MESSAGES" name="name" id='messages' required />
+                    <input value={name} onChange={(e) => setName(e.target.value)} style={{borderBottom: '1px solid #000000'}} type="email" className='contactUsEle' placeholder="NAME" name="name" id='name' required />
+                    <input value={email} onChange={(e) => setEmail(e.target.value)} style={{borderBottom: '1px solid #000000'}} type="email" className='contactUsEle' placeholder="EMAIL" name="name" id='email' required />
+                    <input value={message} onChange={(e) => setMessage(e.target.value)} style={{borderBottom: '1px solid #000000'}} type="email" className='contactUsEle' placeholder="MESSAGES" name="name" id='messages' required />
                     <div onClick={sendCommunication} className='buttonstuffSend'>
                         SEND
                     </div>
 
                 </div>
                 
-                <div style={{display: "flex",flexDirection: "column", flexBasis: "40%", background: "#0A0C70", padding:"80px", paddingTop:"60px"}}>
+                <div className="infoMain">
                     <div className='InfoInfo'>
                         Info
                     </div>

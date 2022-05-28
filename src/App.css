@@ -1,6 +1,8 @@
 .App{
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  width: 100vw;
 }
 
 nav {
@@ -8,7 +10,7 @@ nav {
   text-align: center;
   position:fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   background: rgb(255, 255, 255);
 }
 
@@ -36,11 +38,16 @@ nav li {
 
 .sidebar-nav{
   position: fixed;
+  margin-left: 100px;
   height: 100vh;
-  width: 0vw;
-  right: -150%;
+  width: 100vw;
   background: #000000;
-  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 150%;
+  background: #000000;
+  transition: all .5s;
   
 }
 
@@ -55,7 +62,7 @@ nav li {
   justify-content: center;
   left: 150%;
   transform: translateX(-150%);
-  transition: all 1s;
+  transition: all .5s;
   
 }
 
@@ -122,6 +129,14 @@ nav li {
   display: flex;
   padding-top: 100px;
   background-color: #ECECEC;
+}
+.infoMain{
+  display: flex;
+  flex-direction: column; 
+  flex-basis: 40%; 
+  background: #0A0C70;
+  padding: 80px; 
+  padding-top : 60px;
 }
 
 .hamburger-lines {
@@ -964,8 +979,33 @@ input[type="password"]
   .signUpRight{
     display: none;
   }
-  
-  
+  .buttonstuffSend{
+    margin-left: 0px;
+    
+  }
+  .contactUsDiv {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    
+  }
+  .contactUsEle {
+    
+    margin-right: 50px;
+  }
+  .InfoInfo {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 59px;
+  }
+  .infoMain{
+    display: flex;
+    flex-direction: column; 
+    flex-basis: 40%; 
+    background: #0A0C70;
+    padding: 40px; 
+    padding-top : 60px;
+  }
   
 }
 
