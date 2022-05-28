@@ -120,6 +120,15 @@ nav li {
   cursor: pointer;
 }
 
+.headerbeforeareyou{
+  flex-Basis: 50%;
+  margin-left:60px;
+  padding-left:50px;
+  padding-right:20px;
+  padding-top:100px;
+  margin:10px;
+}
+
 .logo{
   flex-grow: 1;
   padding-left: 50px;
@@ -141,6 +150,7 @@ nav li {
   padding-top: 100px;
   background-color: #ECECEC;
 }
+
 .infoMain{
   display: flex;
   flex-direction: column; 
@@ -196,6 +206,18 @@ nav li {
   line-height: 50px;
   text-align: center;
   color: #000000;
+}
+
+.headerareyoulooking{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 50px;
+  text-align: center;
+  color: #000000;
+  text-align: right;
+  padding-left: 100px
 }
 
 .addblogheading{
@@ -1153,6 +1175,18 @@ input[type="password"]
     width: auto;
     max-width: 300px;
     margin-right: 10px;
+  }
+  .headerbeforeareyou{
+    margin-left:1px;
+    padding-left:10px;
+    margin:1px;
+  }
+
+  .headerareyoulooking{
+    padding-left: 1px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
   }
 
   .logo{
