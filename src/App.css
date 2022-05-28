@@ -67,6 +67,12 @@ nav li {
   
 }
 
+.firstimage{
+  flex-basis: 50%;
+  padding-left:50px;
+  padding-top:50px
+}
+
 .sidebar-ul{
   margin-right: 100px;
   display: flex;
@@ -334,6 +340,20 @@ nav li {
   color: #000000;
 }
 
+.headerrightfirst{
+  padding-top:25px;
+  text-align: right;
+  padding-left: 80px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 162.9%;
+  /* or 33px */
+  text-align: center;
+  color: #000000;
+}
+
 .headerright1 {
   font-family: 'Montserrat';
   font-style: normal;
@@ -386,11 +406,13 @@ nav li {
 }
 
 .homeunderleft{
-  margin-left: 200px;
+  margin-left: 150px;
+  margin-right: 100px;
+
 }
 
 .homeunderright{
-  margin-right: 200px;
+  margin-right: 150px;
   margin-top: 100px;
 }
 
@@ -570,6 +592,13 @@ nav li {
   display: flex;
   flex-direction: column;
 
+}
+
+.headerrighttext{
+  padding-bottom:20px;
+  font-weight: 500;
+  margin-right: 100px;
+  text-align:left;
 }
 
 .RecentBlogs{
@@ -1171,6 +1200,40 @@ input[type="password"]
 
 @media only screen and (max-width: 700px) {
 
+  .headerrighttext{
+    text-align:center;
+    padding-bottom:50px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+
+  .homeunderright{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .firstimage{
+    padding-left:0px;
+    padding-right: 15px;
+    padding-top:0px;
+  }
+
+  .headerrightfirst{
+    padding-top:25px;
+    text-align: center;
+    padding-left: 10px;
+  }
+
+  .sidebyside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 100px;
+  }
+
   .imgBlogPost{
     width: auto;
     max-width: 300px;
@@ -1179,6 +1242,7 @@ input[type="password"]
   .headerbeforeareyou{
     margin-left:1px;
     padding-left:10px;
+    padding-top: 20px;
     margin:1px;
   }
 
@@ -1234,7 +1298,7 @@ input[type="password"]
   }
   
   .homeunderleft{
-    margin: 70px;
+    margin: 0px;
   }
   
   .homeunderright{
@@ -1263,9 +1327,9 @@ input[type="password"]
   }
 
   .sidebyside {
-    display: block;
+    display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .picturesBlogs{

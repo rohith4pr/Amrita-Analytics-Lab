@@ -14,9 +14,6 @@ const HomeMain = ({user,setUser}) => {
 
     const HomeUnder = () => (
         <div className='sidebyside'>
-            <div>
-                <NavBar user={user} setUser={setUser}/>
-            </div>
             <div className='homeunderleft' style={{flexBasis: '45%'}}>
                 <div style={{display: 'flex', justifyContent: 'right' }} >
                 <img style={{
@@ -26,7 +23,7 @@ const HomeMain = ({user,setUser}) => {
                 </div>
             </div>
             <div className='homeunderright' style={{flexBasis: '65%'}}>
-                <div style={{paddingBottom:'20px', fontWeight: '500', textAlign:'left', marginRight: '100px'}} className="headerright">
+                <div className="headerright headerrighttext">
                     When it comes to Consultation, Certificate Courses, or Training Programmes, We are to take those tasks with highest integrity and affordability.
                 </div>
                 <div style={{display: 'flex', justifyContent: 'left', paddingTop:'10px'}}>
@@ -72,8 +69,11 @@ const HomeMain = ({user,setUser}) => {
     );
     return(
         <div>
+            <div>
+                <NavBar user={user} setUser={setUser}/>
+            </div>
             <div className='sidebyside Home'>
-                <div className='swapfalse' style={{flexBasis: '50%', paddingLeft:'50px', paddingTop:'50px'}}>
+                <div className='swapfalse firstimage'>
                     <img style={{
                                 width: '300px',
                                 height: '400px'
@@ -83,7 +83,7 @@ const HomeMain = ({user,setUser}) => {
                     <div className="headerareyoulooking">
                         Are You Looking for Analytical Solutions for Your Business?
                     </div>
-                    <div style={{paddingTop:'25px',textAlign: 'right', paddingLeft: '80px'}} className="headerright">
+                    <div className="headerrightfirst">
                         We are a group of proactive analytics enthusiasts, who work tirelessly to solve data problems and exchange ideas of how to improve business using analytics.
                     </div>
                 </div>
