@@ -814,6 +814,7 @@ img {
   color: #FFFFFF;
 }
 
+
 .buttonstuffLogin{
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -834,10 +835,11 @@ img {
   width: 180px;
 }
 
+
 .buttonstuffSingup{
   
   border-radius: 20px;
-  margin-left: 40px;
+  margin-left: 140px;
   margin-top: 40px;
   margin-bottom: 40px;
   text-align: center;
@@ -1045,7 +1047,18 @@ input[type="password"]
   .LoginLeft{
     flex-basis: 100%;
     margin-left: 0px;
+    padding-left: 20px;
     height: 100vh;
+    width: 500px;
+  }
+  
+  .LoginLeft h2{
+    
+    font-size: 30px;
+    line-height: 59px;
+    text-align: left;
+    margin-top: 90px;
+    padding: 0px;
   }
   .LoginMain{
     flex-grow: 1;
@@ -1166,6 +1179,43 @@ input[type="password"]
     margin-left: 30px;
     margin-right: 50px;
     
+  }
+  .FormField{
+    font-family: 'Montserrat';
+    height: 30px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 29px;
+    letter-spacing: 0.35em;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+  }
+
+  .buttonstuffSingup{
+  
+    margin-left: 0px;
+    padding: 20px;
+    width: 10px;
+  }
+  .buttonstuffLogin{
+    
+    margin-left: 0px;
+    padding: 20px;
+  }
+  .hintFont{
+    margin-left: 10px;
+    color: #4a4891;
+  }
+  .Info {
+    
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    padding-top: 40px;
   }
 }
 
