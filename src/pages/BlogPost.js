@@ -98,10 +98,10 @@ const BlogPost = ({user,setUser,currentBlog}) => {
             </div>
             <div className="BlogPost">
                 <div className='blogpostleft' style={{flexBasis: '30%'}}>
-                    <div className='authorHeader' style={{marginTop:'20px', textAlign:'left', marginLeft:'60px'}}>
+                    <div className='authorHeader1' >
                         Author Information
                     </div>
-                    <div style={{display:'flex', marginLeft:'60px'}}>
+                    <div className="authorBlogPostInfo">
                         <div>
                             <img src={propic} style={{width:'55px', marginRight:'10px'}} alt='pic'/>
                         </div>
@@ -114,17 +114,17 @@ const BlogPost = ({user,setUser,currentBlog}) => {
                             </div>
                         </div>
                     </div>
-                    <div className='authorHeader' style={{fontSize:'20px', marginTop:'10px', textAlign:'left', marginLeft:'60px'}}>
+                    <div className='authorHeader1' style={{marginTop:'10px'}}>
                         About Me
                     </div>
-                    <div className='headerright' style={{fontSize:'15px', marginBottom:'1px', marginTop:'1px', marginLeft:'60px', marginRight:'50px', textAlign:'left'}}>
+                    <div className='headerright1'>
                     {(blogContentContributers === "") ? `No data available`: blogContentContributers["Personal_info"]}
                     </div>
-                    <div className='authorHeader' style={{fontSize:'20px', textAlign:'left', marginLeft:'60px'}}>
+                    <div className='authorHeader1'>
                         Contact Me
                     </div>
                     <div style={{display: "flex", justifyContent: 'left', flexDirection: 'column'}}>
-                        <div style={{display:'flex', textAlign:'left', marginLeft:'60px', alignItems: 'center'}}>
+                        <div className='authorHeader1' style={{display:'flex', textAlign:'left', alignItems: 'center'}}>
                             {(blogContentContributers === "") ? ``: (blogContentContributers["Social"].twitter === "")? ``:
                             (<>
                             <div>
@@ -180,7 +180,7 @@ const BlogPost = ({user,setUser,currentBlog}) => {
                 </div>
                 <div className='blogpostright' style={{flexBasis: '70%', margin:'20px'}}>
                         <div className="blogResponsive" style={{marginTop:'30px'}}>
-                            <div className="blogpostrightTopText" style={{display:'flex', flexDirection :'column', justifyContent: 'left', flexBasis: '40%', paddingLeft: '20px'}}>
+                            <div className="blogpostrightTopText" style={{display:'flex', flexDirection :'column',  flexBasis: '40%'}}>
                                 <div>
                                 {(blogContent === "") ? `No data available !`: calculateDate()}
                                 </div>
@@ -188,11 +188,11 @@ const BlogPost = ({user,setUser,currentBlog}) => {
                                     {(blogContent === "") ? `No data available !`: blogContent["Blog_title"]}
                                 </div>
                             </div>
-                            <div style={{display:'flex',flexGrow : '1'}}>
-                                <img style={{ maxWidth: "500px",marginRight:'10px'}} src={(blogContent === "") ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBU2RkcXhDDRZw4IFAWkFwiPu_FisnD7B5Hg&usqp=CAU' : "/api/blog-images/"+blogContent["Blog_img"]}  alt='pic'/>
+                            <div className="imgBlogPost" style={{display:'flex',flexGrow : '1'}}>
+                                <img   src={(blogContent === "") ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBU2RkcXhDDRZw4IFAWkFwiPu_FisnD7B5Hg&usqp=CAU' : "/api/blog-images/"+blogContent["Blog_img"]}  alt='pic'/>
                             </div>
                         </div>
-                        <div style={{margin:'20px', marginTop:'40px'}}>
+                        <div style={{margin:'0px', marginTop:'40px'}}>
                             <pre style={{whiteSpace: "pre-wrap",fontFamily:"inherit"}}>
                                 {(blogContent === "") ? `No data available !`: blogContent["Blog_content"]}
                             </pre>
