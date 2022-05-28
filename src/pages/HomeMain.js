@@ -79,9 +79,8 @@ const HomeMain = ({user,setUser}) => {
                                 height: '400px'
                                 }} alt='nothing' src={man}/>
                 </div>
-                <div style={{flexBasis: '50%',marginLeft:'60px', paddingLeft:'50px',paddingRight:'20px',paddingTop:'100px',margin:'10px'}}>
-                    <div style={{textAlign: 'right', paddingLeft: "100px"}} className="header">
-            
+                <div className="headerbeforeareyou">
+                    <div className="headerareyoulooking">
                         Are You Looking for Analytical Solutions for Your Business?
                     </div>
                     <div style={{paddingTop:'25px',textAlign: 'right', paddingLeft: '80px'}} className="headerright">
