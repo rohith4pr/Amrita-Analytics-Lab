@@ -263,6 +263,7 @@ nav li {
   height: 61px;
   background: #F8F8F8;
   border-radius: 29.5px;
+  margin-bottom: 50px;
 }
 
 .createnewblogtext{
@@ -479,6 +480,7 @@ nav li {
 
 .BlogContentinside{
   padding-left: 50px;
+  padding-right: 50px;
   display: flex;
   flex-direction: column;
 
