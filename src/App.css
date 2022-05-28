@@ -40,11 +40,11 @@ nav li {
 .sidebar-nav{
   position: fixed;
   margin-left: 100px;
+  padding-top: 20px;
   height: 100vh;
   width: 100vw;
   background: #000000;
   display: flex;
-  align-items: center;
   justify-content: center;
   left: 150%;
   background: #000000;
@@ -55,11 +55,11 @@ nav li {
 .sidebar-nav-open{
   position: fixed;
   margin-left: 100px;
+  padding-top: 120px;
   height: 100vh;
   width: 100vw;
   background: #000000;
   display: flex;
-  align-items: center;
   justify-content: center;
   left: 150%;
   transform: translateX(-150%);
