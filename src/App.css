@@ -46,6 +46,7 @@ nav li {
 
 .sidebar-nav-open{
   position: fixed;
+  margin-left: 100px;
   height: 100vh;
   width: 100vw;
   background: #000000;
@@ -59,7 +60,7 @@ nav li {
 }
 
 .sidebar-ul{
-  
+  margin-right: 100px;
   display: flex;
   flex-direction: column;
   color: #d1d1d1;
