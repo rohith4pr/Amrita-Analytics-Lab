@@ -115,14 +115,14 @@ const BlogPage = ({user,setUser,currentBlog,setCurrentBlog}) => {
                 <div className="picturesBlogs">
                     <img src={imgsrc} alt="pic"></img>
                 </div>
-                <div style={{marginTop : '40px'}} className="BlogRecentHeader">
+                <div style={{marginTop : '30px'}} className="BlogRecentHeader">
                     {title}:
                 </div>
                 <div >
                     {content.substring(0,100)}
                 </div>
                 <NavLink onClick={() => setCurrentBlog(id)}  style={{textDecoration: '18px'}}  to={`/blogs/blogpost/${title}/blogid${id}`}> 
-                <div style={{fontSize: '18px',alignItems:'center'}} className="BlogRecentHeader" >
+                <div style={{fontSize: '18px',alignItems:'center',paddingBottom:'100px'}} className="BlogRecentHeader" >
                     Read more 
                     <img alt="read more" src={Readmore}></img>
                 </div>

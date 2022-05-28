@@ -165,8 +165,8 @@ nav li {
 .header{
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 1000;
+  font-size: 46px;
   line-height: 50px;
   text-align: center;
   color: #000000;
@@ -263,6 +263,7 @@ nav li {
   height: 61px;
   background: #F8F8F8;
   border-radius: 29.5px;
+  margin-bottom: 50px;
 }
 
 .createnewblogtext{
@@ -275,9 +276,9 @@ nav li {
 }
 
 .headerright {
-  font-family: 'Poppins';
+  font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 20px;
   line-height: 162.9%;
   /* or 33px */
@@ -479,6 +480,7 @@ nav li {
 
 .BlogContentinside{
   padding-left: 50px;
+  padding-right: 50px;
   display: flex;
   flex-direction: column;
 

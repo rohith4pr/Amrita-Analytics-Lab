@@ -46,7 +46,7 @@ const LoginPage = ({user,setUser}) => {
           <ul>
               <li className='logo'> 
                   <NavLink style={{display:'flex', flexDirection:'row', color: 'inherit', textDecoration: 'inherit'}} to="/">
-                      <img className='hovershit' width='60px' alt='some value' src={logo}/> 
+                      <img className='hovershit' width='60px' alt='some value' src={logo} style={{paddingLeft:'30px'}}/> 
                       <div className='amritha hovershit'>AMRITA</div>
                       <div className='amrithaINNER hovershit'>ANALYTICS LAB</div>
                   </NavLink>
