@@ -24,7 +24,7 @@ const NavBar = ({user,setUser}) => {
             <ul>
                 <li className='logo'> 
                     <NavLink style={{display:'flex', flexDirection:'row', color: 'inherit', textDecoration: 'inherit'}} to="/">
-                        <img className='hovershit' width='60px' alt='some value' src={logo} style={{paddingLeft:'30px'}}/> 
+                        <img className='hovershit' alt='some value' src={logo} /> 
                         <div className='amritha hovershit'>AMRITA</div>
                         <div className='amrithaINNER hovershit'>ANALYTICS LAB</div>
                     </NavLink>
@@ -80,7 +80,6 @@ const NavBar = ({user,setUser}) => {
                         <span className="line line2"></span>
                         <span className="line line3"></span>
                     </div>  
-                
                 </li>
             </ul>
             <div className={(tabState === 0 ? 'sidebar-nav' : 'sidebar-nav-open')}>
