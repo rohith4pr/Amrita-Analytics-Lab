@@ -8,7 +8,6 @@
 
 .hero {
     background: #0A0C70;
-    width: 900px;
     display: flex;
     align-items: left;
     flex-direction: column;

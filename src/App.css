@@ -1,7 +1,6 @@
 .App{
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 nav {
@@ -658,6 +657,13 @@ img {
 
 }
 
+.signUpRight{
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  margin-top: 80px;
+}
+
 .LoginForm{
   margin-top: 50px;
   background: #0A0C70;
@@ -953,6 +959,9 @@ input[type="password"]
   }
   .LoginMain{
     flex-grow: 1;
+  }
+  .signUpRight{
+    display: none;
   }
   
   
