@@ -96,9 +96,7 @@ const HomeMain = ({user,setUser}) => {
             </div>
             <Home2/>
             <HomeUnder/>
-            <div>
-                <Footer />
-            </div>
+            <Footer />
         </div>
     );
 }
