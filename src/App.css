@@ -38,10 +38,11 @@ nav li {
 .sidebar-nav{
   position: fixed;
   height: 100vh;
-  width: 100vw;
+  width: 0vw;
   right: -150%;
   background: #000000;
   transition: all 0.25s;
+  
 }
 
 .sidebar-nav-open{
@@ -53,8 +54,8 @@ nav li {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  transform: translateX(0%);
+  left: 150%;
+  transform: translateX(-150%);
   transition: all 1s;
   
 }
