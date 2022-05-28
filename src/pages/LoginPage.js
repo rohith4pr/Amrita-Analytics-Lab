@@ -59,15 +59,15 @@ const LoginPage = ({user,setUser}) => {
         <div className="LoginLeft">
           <h2>Login your account</h2>
           <input value={tempUser} onChange={(e) => setTempUser(e.target.value)} style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" id='name' required />
-          { flag === 2 && <p>Your login credentials does not exist.</p>}
+          { flag === 2 && <p className="hintFont">Your login credentials does not exist !</p>}
           <input value={tempPassword} onChange={(e) => setTempPassword(e.target.value)} style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" id='password' required />
-          { flag === 3 && <p>Your login credentials could not be verified, please try again.</p>}
+          { flag === 3 && <p className="hintFont">Your login credentials could not be verified, please try again !</p>}
           <div style={{display:'flex'}}>
             <div onClick={ ()=>loginButtonAction() } className='buttonstuffLogin'>
               LOGIN
             </div>
-            <div className='buttonstuffLogin' style={{marginLeft:'100px'}}>
-              <NavLink style={{ textDecoration:'inherit', color:'inherit' }}  to="/signup"> SIGNUP </NavLink>
+            <div className='buttonstuffSingup' style={{marginLeft:'100px'}}>
+              <NavLink style={{ textDecoration:'inherit', color:'inherit' }}  to="/signup"> SIGNUP? </NavLink>
             </div>
           </div>
         </div>

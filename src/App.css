@@ -639,6 +639,7 @@ img {
 .LoginMain{
   margin-top: 100px;
   display: flex;
+  
 }
 
 .LoginLeft{
@@ -694,6 +695,11 @@ img {
   color: #FFFFFF;
 }
 
+.hintFont{
+  margin-left: 40px;
+  color: #4a4891;
+}
+
 .FormField{
   font-family: 'Montserrat';
   height: 30px;
@@ -729,6 +735,25 @@ img {
   padding: 20px;
   width: 180px;
 }
+
+.buttonstuffSingup{
+  
+  border-radius: 20px;
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  border-radius: 29.5px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.24em;
+  color: #d1d1d1;
+  padding: 20px;
+  width: 180px;
+}
 .buttonstuffSend{
   border-radius: 20px;
   margin-left: 100px;
@@ -755,10 +780,10 @@ input.contactUsEle::-webkit-input-placeholder {
   color: black;
 }
 input.FormField::-webkit-input-placeholder {
-  color: black;
+  color: white;
 }
 input.FormField2::-webkit-input-placeholder {
-  color: black;
+  color: white;
 }
 input.addblogtitle::-webkit-input-placeholder {
   color: black;
@@ -916,6 +941,19 @@ input[type="password"]
   .right {
     font-size: 14px;
   }
+  .LoginRight{
+    display: none;
+  }
+  .LoginLeft{
+    flex-basis: 100%;
+    margin-left: 0px;
+    height: 100vh;
+  }
+  .LoginMain{
+    flex-grow: 1;
+  }
+  
+  
   
 }
 
@@ -977,6 +1015,10 @@ input[type="password"]
     line-height: 45px;
     
   
+  }
+
+  .ContactUsInfo{
+    flex-direction: column;
   }
 }
 
