@@ -11,10 +11,30 @@ const LoginPage = ({user,setUser}) => {
   const[tempUser,setTempUser] = useState("");
   const[tempPassword,setTempPassword] = useState("");
   const[flag,setFlag] = useState(0);
+  const[clicked,setClicked] = useState(false);
   let navigate = useNavigate();
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      loginButtonAction();
+    }
+  }
 
   const loginButtonAction = async () => {
 
+    
+
+    if(tempUser === ""){
+      setFlag(4);
+      return;
+    }
+
+    if(tempPassword === ""){
+      setFlag(5);
+      return;
+    }
+
+    setClicked(true);
     const result = await fetch(`/api/login-user-auth`, {
         method: 'post',
         body: JSON.stringify({ tempUser, tempPassword }),
@@ -37,6 +57,7 @@ const LoginPage = ({user,setUser}) => {
     else{
       console.log(body["res"]);
     }
+    setClicked(false);
   }
 
   
@@ -59,12 +80,14 @@ const LoginPage = ({user,setUser}) => {
       <div className="LoginMain">
         <div className="LoginLeft">
           <h2>Login your account</h2>
-          <input value={tempUser} onChange={(e) => setTempUser(e.target.value)} style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" id='name' required />
+          <input value={tempUser} onKeyDown={handleKeyDown} onChange={(e) => setTempUser(e.target.value) || setFlag(0)} style={{borderBottom: '1px solid #FFFFFF'}} type="email" className="FormField" placeholder="USERNAME" id='name' required />
           { flag === 2 && <p className="hintFont">Your login credentials does not exist !</p>}
-          <input value={tempPassword} onChange={(e) => setTempPassword(e.target.value)} style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" id='password' required />
+          { flag === 4 && <p className="hintFont">Username cannot be empty !</p>}
+          <input value={tempPassword} onKeyDown={handleKeyDown} onChange={(e) => setTempPassword(e.target.value) || setFlag(0)} style={{borderBottom: '1px solid #FFFFFF', marginTop : '70px'}}type="password" className="FormField" placeholder="PASSWORD" id='password' required />
           { flag === 3 && <p className="hintFont">Your login credentials could not be verified, please try again !</p>}
+          { flag === 5 && <p className="hintFont">Password cannot be empty !</p>}
           <div style={{display:'flex',justifyContent:'flex-start'}}>
-            <div onClick={ ()=>loginButtonAction() } className="buttonstuffLogin">
+            <div onClick={clicked?null:loginButtonAction } className="buttonstuffLogin">
               LOGIN
             </div>
             <div className='buttonstuffSingup'>

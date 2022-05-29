@@ -9,6 +9,8 @@ const AddBlog = ({user,setUser}) => {
     const [content,setContent] = useState("");
     //const [picLink,setPicLink] = useState("");
     const [fileUpload,setFileUpload] = useState("");
+    const[flag,setFlag] = useState(0);
+    const[clicked,setClicked] = useState(false);
     if(user === ""){
         navigate("/blogs");
     }
@@ -16,6 +18,24 @@ const AddBlog = ({user,setUser}) => {
     const submitBlog = async () =>{
 
         
+            
+        if(title === ""){
+            setFlag(1);
+            return;
+        }
+
+        if(fileUpload === ""  || fileUpload === undefined){
+            setFlag(2);
+            return;
+        }
+    
+        if(content === ""){
+            setFlag(3);
+            return;
+        }
+    
+        setClicked(true);
+
         const formData = new FormData();
         
 		formData.append('file', fileUpload);
@@ -47,6 +67,7 @@ const AddBlog = ({user,setUser}) => {
         });
         navigate("/blogs");
         console.log(result.json());
+        setClicked(false);
         return;
     }
     useEffect(() => {
@@ -55,25 +76,30 @@ const AddBlog = ({user,setUser}) => {
      return(
         <div>
             <NavBar className="sidebyside" user={user} setUser={setUser}/>
-            <div style={{display:'flex', flexDirection:'column',backgroundColor:'white', paddingTop:'100px',marginLeft:'250px'}}>
+            <div className="addBlogContainer" >
                 <div className="addblogheading" style={{marginBottom:'50px', marginTop:"20px"}}>
                     NEW BLOG
                 </div>
-                <div style={{display:'flex'}}>
-                    <div style={{display:'flex', marginBottom:'30px'}}>
-                        <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" className="addblogtitle" placeholder="Title" name="title" id='title' required/>
+                <div className="blogTitleContainer" >
+                    <div className="titleTag" >
+                        <input value={title} onChange={(e) => setTitle(e.target.value) || setFlag(0)} type="text" className="addblogtitle" placeholder="Title" name="title" id='title' required/>
+                        { flag === 1 && <p className="hintFont">Title is required !</p>}
                     </div>
-                    <div style={{display:'flex', marginLeft:'210px'}}>
-                        <div className="AttachFile" style={{display:'flex', flexDirection:'column', alignItems:'center', background:"#F2F2F2", borderRadius:'10px', width: "215px", justifyContent: 'center'}}>
-                        <input  onChange={(e) => setFileUpload(e.target.files[0])} type="file" className="addblogtitle" placeholder="Title" name="title" id='title' accept="image/*" required/>
+                    <div className="AttachFile" >
+                        <input  onChange={(e) => setFileUpload(e.target.files[0]) || setFlag(0)} type="file" className={(fileUpload === ""  || fileUpload === undefined)?"hideAttach":"custom-file-input"}  placeholder="Title" name="title" id='files' accept="image/*" required/>
+                        <div className={(fileUpload === "" || fileUpload === undefined)?"attachLabel":"hideAttach"}>
+                            < label  for="files">Select a file</label>
                         </div>
+                        { flag === 2 && <p className="hintFont">Picture for the blog is required !</p>}
                         
                     </div>
+                        
                 </div>
                 <div>
-                    <textarea value={content} onChange={(e) => setContent(e.target.value)} type="textarea" className="addblogcontent" placeholder="Write here.." name="content" id='content' required />
+                    <textarea value={content} onChange={(e) => setContent(e.target.value) || setFlag(0)} type="textarea" className="addblogcontent" placeholder="Write here.." name="content" id='content' required />
+                    { flag === 3 && <p className="hintFont">Content for the blog is required !</p>}
                 </div>
-                <div onClick={submitBlog} className="SubmitButton" style={{marginLeft:'810px', display:'flex', flexDirection:'column', alignItems:'center', background:"#F2F2F2", width: "215px", justifyContent: 'center', borderRadius:'10px'}}>
+                <div onClick={clicked?null:submitBlog} className="SubmitButton" >
                     <div>
                         Submit
                     </div>

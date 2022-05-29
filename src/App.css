@@ -136,7 +136,7 @@ nav li {
 }
 
 .logo{
-  flex-grow: 1;
+  width: 100vw;
   padding-left: 50px;
   padding-top: 10px;
 }
@@ -244,9 +244,15 @@ nav li {
   color: #000000;
 }
 
+.blogTitleContainer{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1010px;
+}
+
 .addblogtitle{
-  width: 565px;
-  height: 40px;
+  height: 50px;
+  width: 400px;
   background: #F2F2F2;
   border:none;
   border-radius: 10px;
@@ -259,7 +265,6 @@ nav li {
   /* identical to box height */
 
   letter-spacing: 0.1em;
-
   color: #000000;
   padding-left: 30px;
   
@@ -271,11 +276,67 @@ nav li {
   font-size: 16px;
   line-height: 16px;
   /* identical to box height */
-  height: 45px;
+  height: 65px;
   letter-spacing: 0.1em;
   color: #000000;
   
 }
+
+.titleTag{
+  margin-bottom: 30px;
+}
+
+.custom-file-input{
+  height: 40px;
+  width: 340px;
+  padding-left: 30px;
+  background: #F2F2F2;
+  border:none;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  /* identical to box height */
+  text-align: left;
+  padding-top: 10px;
+  letter-spacing: 0.1em;
+
+  color: #000000;
+}
+
+.attachLabel{
+  height: 40px;
+  width: 340px;
+  padding-left: 30px;
+  background: #F2F2F2;
+  border:none;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  /* identical to box height */
+  text-align: left;
+  padding-top: 10px;
+  letter-spacing: 0.1em;
+
+  color: #000000;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+  display: none;
+}
+
+.attachLabel:hover{
+  cursor: pointer;
+}
+
 .SubmitButton {
   font-family: 'Montserrat';
   font-style: normal;
@@ -286,6 +347,14 @@ nav li {
   letter-spacing: 0.1em;
   color: #000000;
   margin-top: 30px;
+  margin-left:'810px';
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  background: #F2F2F2;
+  width: 215px;
+  justify-content: center;
+  border-radius: 10px;
 
 }
 
@@ -295,8 +364,8 @@ nav li {
 }
 
 .addblogcontent{
-  min-width: 990px;
   max-width: 990px;
+  width: 990px;
   min-height: 300px;
   background: #F2F2F2;
   border:none;
@@ -307,6 +376,7 @@ nav li {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+ 
   /* identical to box height */
 
   letter-spacing: 0.1em;
@@ -315,6 +385,10 @@ nav li {
   padding-left: 30px;
   padding-top: 10px;
 
+}
+
+.hideAttach{
+  display: none;
 }
 
 .createnewblog{
@@ -383,6 +457,15 @@ nav li {
   display: flex;
   padding-bottom: 150px;
   padding-top: 150px;
+}
+
+.addBlogContainer{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-top: 100px;
+  margin-left: 250px;
+  padding-bottom: 20px;
 }
 
 .Home2 {
@@ -833,6 +916,14 @@ img {
 .hintFont{
   margin-left: 40px;
   color: #4a4891;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height */
+  
+  letter-spacing: 0.1em;
 }
 
 .FormField{
@@ -1130,6 +1221,33 @@ input[type="password"]
     padding: 40px; 
     padding-top : 60px;
   }
+  .addBlogContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-top: 100px;
+    margin-left: 50px;
+  }
+  .addblogcontent{
+   width: 70vw;
+   margin-top: 50px;
+  
+  }
+  .blogTitleContainer{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+  }
+  .addblogtitle{
+    width: 70vw;
+    
+  }
+  .attachLabel{
+    width: 70vw;
+  }
+  .custom-file-input{
+    width: 70vw;
+  }
   
 }
 
@@ -1226,9 +1344,10 @@ input[type="password"]
     line-height: 29px;
     letter-spacing: 0.35em;
     margin-left: 10px;
-    margin-right: 20px;
+    margin-right: 30px;
     padding-left: 0px;
     padding-bottom: 10px;
+    width: 80vw;
   }
 
   .buttonstuffSingup{
@@ -1253,6 +1372,14 @@ input[type="password"]
     letter-spacing: 0.1em;
     color: #FFFFFF;
     padding-top: 40px;
+  }
+
+  .FormField2 {
+    flex: 1 ;
+    width: 80vw;
+    margin-left: 10px;
+    padding-left: 5px;
+    
   }
 }
 
